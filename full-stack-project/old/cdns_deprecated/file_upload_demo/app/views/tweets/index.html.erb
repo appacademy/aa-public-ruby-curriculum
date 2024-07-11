@@ -1,0 +1,16 @@
+
+  <h<%= 1 %>>
+    All the tweets
+  </h<%= 1 %>>
+  <a href="<%= new_tweet_url  %>">New Tweet</a>
+
+
+<ul>
+  <% @tweets.each do |tweet| %>
+    <li>
+      <a href="<%= tweet_url(tweet.id) %>">
+        <%= tweet.body %>
+      </a>
+    </li>
+  <% end %>
+</ul>

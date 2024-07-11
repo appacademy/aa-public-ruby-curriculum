@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Click A Cat!</title>
+  <style>
+
+  html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    color: black;
+    background: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin: 30px;
+  }
+
+  .grid {
+    margin: 30px auto;
+    width: 300px;
+    border: 5px solid black;
+    background-image: url("img/cat.jpg");
+    background-size: cover;
+  }
+
+  .grid > li {
+    float: left;
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+    background: gray;
+    cursor: pointer;
+  }
+
+  .grid > li.cleared {
+    background: transparent;
+  }
+
+  .grid > li:hover {
+    background: yellow;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Cat Click</h1>
+
+  <ul class="grid group">
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <button>Add Another Row</button>
+
+<script src="js/jquery.js"></script>
+<script>
+
+/*
+Always wait until DOM is fully parsed
+and ready to go.
+*/
+
+$(document).on("ready", function(){
+
+  /*
+  When we run a jQuery selector like $("li"),
+  we only grab matching elements that are on the
+  page at the time this line of code is run.
+  We're binding the click handler to the outer
+  `.grid` element, not to individual `li`s. This
+  way we can add `li` elements later on, and they
+  would still trigger the event, firing off the
+  callback. This is possible because events bubble
+  up the DOM. jQuery is nice and allows us to select
+  bubbled-up events that match a certain selector.
+  Here we are selecting only `li` events that
+  bubbled-up to the `.grid`.
+  */
+
+  $(".grid").on("click", "li", function(event){
+
+    /*
+    The event object that gets passed in.
+    */
+    console.log("event -->", event);
+
+    /*
+    The single element that matches the selector
+    ".grid li" on which the event was triggered.
+    */
+    console.log("event.currentTarget -->", event.currentTarget);
+
+    /*
+    We wrap `event.currentTarget` in $() jQuery to be
+    able to call jQuery methods on it. The convention
+    is to start a variable name with a $ to signal
+    that you're dealing with a jQuery wrapped DOM object.
+    */
+    var $li = $(event.currentTarget);
+
+    /*
+    Always prefer toggling classes instead of adding
+    inline styles. All styling should be pushed to
+    stylesheets.
+    */
+    $li.toggleClass("cleared");
+
+  });
+
+
+  /*
+  To make the game more difficult, we want to inject
+  `li` elements on the fly. We do this by listening
+  to the click event on a `button` and in its callback
+  append a string of `li` elements to the `.grid`.
+  Since we set up our earlier listener to the `.grid`
+  and not individual `li` elements, these newly injected
+  elements will work like any other, bubbling their
+  events up and which get caught by their parent.
+  */
+  $("button").on("click", function(event){
+
+    console.log("The Add Another Row button was clicked.");
+
+    var $html = $("<li></li><li></li><li></li>");
+
+    $(".grid").append($html);
+
+  });
+
+
+  /*
+  To see bubbling more clearly, we bind a click
+  listener to the `body` element. This will catch
+  any click events on the `li`s, as they are
+  nested in the `body`.
+  */
+  $("body").on("click", function(){
+
+    console.log("In the body callback: event -->", event);
+
+    /*
+    The event.currentTarget will always be the
+    element which matches the selector on which
+    was bound (and possibly filtered). In our
+    case this is `body`.
+    */
+    console.log(
+      "In the body callback: event.currentTarget -->",
+      event.currentTarget);
+
+
+    /*
+    However, conveniently we also have access to
+    the actual element that triggered the event
+    and caused it to bubble up. This is the
+    `event.target`. So if you clicked on an `li`
+    element, this will be the `li`. See how this
+    is different from the `event.currentTarget`.
+    */
+    console.log(
+      "In the body callback: event.target --->",
+      event.target);
+  });
+
+
+});
+
+</script>
+
+</body>
+</html>

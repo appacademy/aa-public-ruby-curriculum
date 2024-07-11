@@ -1,0 +1,17 @@
+<div class='tweet'>
+  <h3 class='tweeter'>
+    <a href='<%= user_url(tweet.user) %>'>
+      @<%= tweet.user.username %>
+    </a>
+  </h3>
+
+  <p><%= tweet.content %></p>
+
+  <ul>Mentions
+    <% tweet.mentions.each do |mention| %>
+      <li class='tweetee'>
+        <a href='<%= user_url(mention.user) %>'>@<%= mention.user.username %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>

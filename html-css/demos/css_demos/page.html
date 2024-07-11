@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page</title>
+  <style>
+
+/* --- Reset user agent styles --- */
+
+html, body, header, h1, h2, nav, ul, li, a, footer, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* --- Set basic html elements --- */
+
+body {
+  font-family: sans-serif;
+  background: #eee;
+  color: #333;
+}
+
+a {
+  color: #f00;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+/* --- Helper methods (clearfix) --- */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* --- Header --- */
+
+.header {
+  background: #f00;
+  border-bottom: 3px solid #333;
+}
+
+.header-wrap {
+  width: 900px;
+  margin: auto;
+  border-left: 3px solid #333;
+  border-right: 3px solid #333;
+}
+
+.header a {
+  color: #fff;
+}
+
+.header-logo {
+  float: left;
+}
+
+.header-logo > a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.header-logo > a:hover {
+  background: #333;
+}
+
+.header-nav {
+  float: right;
+}
+
+.header-nav > ul {
+}
+
+.header-nav > ul > li {
+  position: relative;
+  float: left;
+  border-left: 3px solid #333;
+}
+
+.header-nav > ul > li > a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.header-nav > ul > li:hover > a {
+  background: #333;
+}
+
+.header-nav-drop-down {
+  display: none;
+  position: absolute;
+  left: -3px;
+  border: 3px solid #333;
+  background: #fff;
+  width: 300px;
+}
+
+.header-nav > ul > li:hover > .header-nav-drop-down {
+  display: block;
+}
+
+.header-nav-drop-down > li {
+  border-top: 3px solid #333;
+}
+
+.header-nav-drop-down > li:first-child {
+  border-top: 0;
+}
+
+.header-nav-drop-down > li > a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+}
+
+.header-nav-drop-down > li:hover > a {
+  background: #ccc;
+}
+
+.header-nav-badge {
+  display: inline;
+  background: #333;
+  padding: 2px 5px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.header-nav > ul > li:hover .header-nav-badge {
+  background: #f00;
+}
+
+/* --- Page --- */
+
+.page {
+  background: white;
+  width: 860px;
+  padding: 20px;
+  margin: auto;
+  border-left: 3px solid #ddd;
+  border-right: 3px solid #ddd;
+}
+
+.page-left {
+  float: left;
+  width: 200px;
+  padding: 0 20px 0 0;
+  border-right: 3px solid #ddd;
+}
+
+.page-right {
+  float: right;
+  width: 600px;
+}
+
+/* --- Footer --- */
+
+.footer {
+  width: 860px;
+  padding: 20px;
+  margin: auto;
+  background: #ddd;
+  color: #999;
+  border: 3px solid #ccc;
+}
+
+.footer a {
+  color: #999;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  float: left;
+}
+
+.footer-links {
+  float: right;
+}
+
+.footer-links > ul > li {
+  float: left;
+  padding: 0 0 0 20px;
+}
+
+</style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-wrap group">
+
+      <h1 class="header-logo">
+        <a href="#">App Academy Students</a>
+      </h1>
+
+      <nav class="header-nav">
+        <ul class="group">
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Notifications <strong class="header-nav-badge">3</strong></a>
+            <ul class="header-nav-drop-down">
+              <li><a href="#">Someone liked your picture.</a></li>
+              <li><a href="#">You have a new friend request.</a></li>
+              <li><a href="#">Welcome to App Academy.</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="page group">
+    <section class="page-left">
+
+      <h2>Sidebar</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+    <section class="page-right">
+
+      <h2>Content</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+  </div>
+
+  <footer class="footer group">
+    <small class="footer-copy">
+      &copy; 2013 App Academy.
+    </small>
+
+    <nav class="footer-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

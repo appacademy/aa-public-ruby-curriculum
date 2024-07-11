@@ -1,0 +1,35 @@
+<h2 class='page-header'><%= @user.username %></h2>
+
+<%= render 'follows/form', user: @user %>
+
+<div class='user-detail'>
+<article class='left-half'>
+  <ul class='tweets'>
+    <% @user.tweets.each do |tweet| %>
+      <li><%= render 'tweets/tweet', tweet: tweet %></li>
+    <% end %>
+  </ul>
+</article>
+
+<aside class='right-half'>
+  <ul class='users'>Followers
+    <% if @user.followers.count < 1 %>
+      <p> No followers... yet!</p>
+    <% else %>
+      <% @user.followers.each do |follower| %>
+        <li>@<%= follower.username %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <ul class='users'>Followees
+    <% if @user.followees.count < 1 %>
+      <p> No followees... yet!</p>
+    <% else %>
+      <% @user.followees.each do |followee| %>
+        <li>@<%= followee.username %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</aside>
+</div>

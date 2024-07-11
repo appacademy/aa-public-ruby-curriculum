@@ -1,0 +1,21 @@
+<img class="corgi" src="http://placecorgi.com/2000/2000" alt="" />
+<div class="chat">
+  <ul id="message-list">
+    <% @messages.each do |message| %>
+      <li>
+        <%= message.author %>: <%= message.text %>
+      </li>
+    <% end %>
+  </ul>
+
+  <form action="/messages" method="post">
+    <input type="hidden" name="authenticity_token" id="" value="<%= form_authenticity_token %>" />
+    <label for="">Author
+      <input type="text" name="message[author]" id="" value="" />
+    </label>
+    <label for="">Text
+      <input type="text" name="message[text]" id="" value="" />
+    </label>
+    <input type="submit" name="" id="" value="Add Message" />
+  </form>
+</div>

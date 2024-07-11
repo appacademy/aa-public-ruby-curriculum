@@ -1,0 +1,31 @@
+.sections-nav {
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #d3d3d3;
+
+	ul {
+		display: flex;
+		padding: 10px 0;
+	}
+
+	li {
+		margin: 0 10px;
+		font-family: $sans-serif;
+		cursor: pointer;
+	}
+
+	a {
+		text-transform: uppercase;
+		font-size: 10px;
+	}
+
+	li:hover:not(:last-child) {
+		background-color: $light-gray;
+	}
+}
+
+@media all and (max-width: 1000px) {
+  .sections-nav {
+  	display: none;
+  }
+}

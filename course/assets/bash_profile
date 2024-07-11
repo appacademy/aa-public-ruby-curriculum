@@ -1,0 +1,32 @@
+export PS1="\n\[$(tput setaf 4)\]\u \[$(tput setaf 6)\]\w \[$(tput setaf 7)\]\\$ \[$(tput setaf 2)\]\n❯ \[$(tput sgr0)\]"
+export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin/:$PATH
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+eval "$(rbenv init -)"
+alias ..='cd ..'
+alias c.='code .'
+alias be='bundle exec'
+alias bp='subl ~/.bash_profile'
+alias gaa='git add -A .'
+alias gb='git branch'
+alias gc='git clone'
+alias gco='git checkout'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias goverwrite='git fetch origin master; git reset --hard FETCH_HEAD; git clean -df'
+alias gpo='git push -u origin master'
+alias gpr='git pull --rebase'
+alias grh='git reset --hard'
+alias gst='git status'
+alias ls='ls -G' # color
+alias rc='rails c'
+alias rdbc='bundle exec rails db:create'
+alias rdbd='bundle exec rails db:drop'
+alias rdbm='bundle exec rails db:migrate'
+alias rdbs='bundle exec rails db:seed'
+alias rr='bundle exec rails routes'
+alias rs='rails s'
+alias s.='subl .'
+alias ta='cd ~/Dropbox/TA'

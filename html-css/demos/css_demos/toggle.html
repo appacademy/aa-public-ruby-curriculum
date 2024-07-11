@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Toggle A Machine!</title>
+  <style>
+
+  /* --- Reset user agent styles --- */
+
+  html, body, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #fff;
+    color: #000;
+  }
+
+  .machine {
+    padding: 100px;
+    text-align: center;
+  }
+
+  /*
+    Here is where the toggle happens.
+    By default the state is off.
+    ".is-on" is the modifier class.
+  */
+
+  .machine-on,
+  .is-on > .machine-off {
+    display: none;
+  }
+
+  .machine-off,
+  .is-on > .machine-on {
+    display: block;
+  }
+
+  /*
+    Here is the expanded version of the toggle
+    for clarity. This code does exactly the same
+    as the two statements above, but is easier
+    to understand at first glance.
+  */
+
+  /* --- Default OFF state --- */
+
+  .machine-on {
+    display: none;
+  }
+
+  .machine-off {
+    display: block;
+  }
+
+  /* --- Modified ON state --- */
+
+  .is-on > .machine-on {
+    display: block;
+  }
+
+  .is-on > .machine-off {
+    display: none;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="machine">
+
+  <div class="machine-on">
+    <strong>Machine is ON</strong><br>
+    <button>TURN OFF</button>
+  </div>
+
+  <div class="machine-off">
+    <strong>Machine is OFF</strong><br>
+    <button>TURN ON</button>
+  </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script>
+
+$(document).ready(function(){
+  $(".machine").on("click", "button", function(event){
+
+    // Cancel any default html behaviour.
+    // Not necessary in this example though,
+    // as buttons are not in a form.
+    event.preventDefault();
+
+    var $button = $(this);
+    var $scope = $button.closest("div");
+    var $machine = $scope.closest(".machine");
+
+    if($scope.is(".machine-on")){
+      // Machine is on, turn it off.
+      $machine.removeClass("is-on");
+    } else {
+      // Machine is off, turn it on.
+      $machine.addClass("is-on");
+    }
+
+  });
+});
+
+</script>
+</body>
+</html>

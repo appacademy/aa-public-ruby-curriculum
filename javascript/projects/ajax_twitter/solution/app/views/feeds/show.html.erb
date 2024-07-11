@@ -1,0 +1,18 @@
+<h2 class='page-header'>Your Feed!</h2>
+
+<%= render 'tweets/form', tweets_ul: '#feed' %>
+
+<div class="infinite-tweets">
+
+  <% if @feed_tweets.empty? %>
+    <p>No tweets... yet! Follow someone!</p>
+  <% else %>
+    <ul class="tweets" id="feed">
+      <% @feed_tweets.each do |tweet| %>
+        <li><%= render "tweets/tweet", tweet: tweet %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <button class="fetch-more">Fetch more tweets!</button>
+</div>

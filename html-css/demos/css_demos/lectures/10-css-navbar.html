@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NAVBAR</title>
+  <style>
+
+  /* RESET */
+
+  html, body, header, nav,
+  h1, a, ul, li, p {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    color: inherit;
+
+    background: transparent;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* UTILS */
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* SHARED */
+
+  body {
+    font-family: sans-serif;
+    background: lightgray;
+    color: black;
+  }
+
+  /* HEADER */
+
+  .header {
+    background: red;
+    color: white;
+    font-weight: bold;
+  }
+
+  .header a {
+    display: block;
+    padding: 20px;
+  }
+
+  .header a:hover {
+    background: black;
+  }
+
+  .header-nav {
+    width: 800px;
+    margin: auto;
+  }
+
+  .header-nav-logo {
+    float: left;
+  }
+
+  .header-nav-logo > a {
+  }
+
+  .header-nav-logo > a:hover {
+  }
+
+  .header-nav-list {
+    float: right;
+  }
+
+  .header-nav-list > li {
+    float: left;
+  }
+
+  .header-nav-list > li > a {
+  }
+
+  .header-nav-list > li > a:hover {
+  }
+
+  .content {
+    width: 800px;
+    margin: auto;
+    min-height: 400px;
+    background: white;
+  }
+
+  .content > p {
+    padding: 20px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="header-nav group">
+
+      <h1 class="header-nav-logo">
+        <a href="#">App Academy</a>
+      </h1>
+
+      <ul class="header-nav-list group">
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+
+        <!--
+          CLEARFIX
+        -->
+      </ul>
+
+      <!--
+        CLEARFIX
+      -->
+    </nav>
+  </header>
+
+  <main class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </main>
+
+</body>
+</html>

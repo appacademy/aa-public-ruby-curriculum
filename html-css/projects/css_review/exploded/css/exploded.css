@@ -1,0 +1,139 @@
+/* PHASE 0: Reset */
+
+html, head, body, header,
+nav, h1, a, ul, li, main,
+section, p, footer, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+header, nav, h1, a, ul, li,
+main, section, p, footer, small {
+  color: #f00;
+  border: 1px solid #f00;
+  padding: 20px;
+}
+
+header, nav, main, section,
+footer, small {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* PHASE 1: Header */
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header {
+
+}
+
+.header-nav {
+  margin: 0 auto;
+  width: 900px;
+}
+
+/* PHASE 2: Navigation */
+
+.header a {
+  display: block;
+}
+
+.header-logo {
+  float: left;
+  font-weight: 700;
+}
+
+.header-logo:hover {
+
+}
+
+.header-list {
+  float: right;
+}
+
+.header-list > li {
+  float: left;
+}
+
+.header-list > li:hover {
+
+}
+
+/* PHASE 3: Content */
+
+.content {
+  margin: 0 auto;
+  width: 900px;
+}
+
+.content-sidebar {
+  float: left;
+  width: 198px;
+}
+
+.content-main {
+  float: left;
+  width: 618px;
+}
+
+.content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.content p {
+
+}
+
+/* PHASE 4: Footer */
+
+.footer {
+  width: 900px;
+  margin: 0 auto 50px auto;
+  font-size: 14px;
+}
+
+.footer-copy {
+  float: left;
+}
+
+.footer-links {
+  float: right;
+}
+
+.footer-links > li {
+  float: left;
+}
+
+.footer a {
+  display: block;
+}
+
+.footer a:hover {
+}

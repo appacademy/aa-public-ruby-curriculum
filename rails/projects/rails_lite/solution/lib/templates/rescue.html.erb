@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .header {
+      background: red;
+    }
+
+    .source-view {
+      border: 10px solid lightgray;
+      width: 800px;
+    }
+
+    .line {
+      white-space: pre-wrap;
+    }
+
+    .line-num {
+      background: lightgray
+    }
+
+    .line.error {
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class='header'><%=e.class%>: <%=e.message%></h2>
+
+  <h4>Extracted source (around line <b><%=source_line_num(e)%></b>):</h4>
+
+  <div class='source-view'>
+    <table cellpadding="0" cellspacing="0">
+      <% extract_formatted_source(e).each do |line_num, line| %>
+        <tr>
+          <td>
+            <pre class='line-num'><%=line_num %></pre>
+          </td>
+          <td>
+            <pre class='line
+              <%= 'error' if line_num == source_line_num(e)%>'><%= line %></pre>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <h5><%= File.expand_path(error_source_file(e)) %></h5>
+
+  <h3>Stack trace</h3>
+  <% e.backtrace.each do |stack_line| %>
+    <%= stack_line %>
+    <br>
+  <% end %>
+</body>
+

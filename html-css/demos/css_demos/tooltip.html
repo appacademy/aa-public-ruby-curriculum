@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Triangle &amp; Hover Tooltip</title>
+  <style>
+
+  html, body, div, img, a, strong {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    padding: 200px;
+    font-family: sans-serif;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .thumb {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 50px;
+    background: red;
+    border: 5px solid black;
+  }
+
+  .thumb:before {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .thumb:after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 65px;
+
+    left: 50%;
+    margin-left: -10px;
+
+    width: 0;
+    height: 0;
+    border-top: 10px solid #000;
+    border-bottom: 0 solid #000;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    background: transparent;
+  }
+
+  .thumb:hover:before,
+  .thumb:hover:after {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+  <a class="thumb" href="#" title="Sennacy The Great">
+    <img src="img/cat.jpg">
+  </a>
+
+</body>
+</html>

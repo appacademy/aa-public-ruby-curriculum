@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Google</title>
+  <style>
+
+  /* RESET */
+
+  html, body, nav, ul, li, div,
+  em, span, main, img, form, button,
+  header, footer, figure, a, strong,
+  span, input[type="text"] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  input[type="text"] {
+    -webkit-appearance: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* UTILS */
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* BODY */
+
+  html, body {
+    position: relative;
+    height: 100%;
+    min-height: 460px;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #404040;
+  }
+
+  /* NAV */
+
+  nav {
+    padding: 22px 30px;
+  }
+
+  nav > ul {
+    float: right;
+  }
+
+  nav > ul > li {
+    float: left;
+  }
+
+  nav > ul > li > a {
+    display: block;
+    padding: 0 0 0 15px;
+  }
+
+  .icon-grid {
+    display: block;
+    position: relative;
+    background: #777;
+    margin: 0 7px 0 25px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-grid:hover {
+    background: #333;
+  }
+
+  .icon-grid:after,
+  .icon-grid:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 2px solid #fff;
+  }
+
+  .icon-grid:before {
+    top: 0;
+    left: 4px;
+    width: 4px;
+    height: 16px;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .icon-grid:after {
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 4px;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .user-dropdown {
+
+  }
+
+  .user-dropdown > a:after {
+    content: " ▾";
+  }
+
+  /* MAIN */
+
+  main {
+    padding: 133px 0 0 0;
+  }
+
+  figure {
+    margin: auto;
+    padding: 0 0 23px 0;
+    height: 95px;
+    width: 269px;
+  }
+
+  form {
+
+  }
+
+  .search-bar {
+    position: relative;
+    margin: auto;
+    width: 572px;
+  }
+
+  .search-bar > input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .search-bar > input:hover {
+    border-color: #bbb;
+  }
+
+  .search-bar > input:focus {
+    border-color: #06f;
+  }
+
+  .search-bar > .voice {
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    height: 23px;
+    width: 17px;
+    cursor: pointer;
+  }
+
+  .search-bar > .voice > .voice-icon {
+    background: url(data:image/gif;base64,R0lGODlhHAAmAKIHAKqqqsvLy0hISObm5vf394uLiwAAAP///yH5BAEAAAcALAAAAAAcACYAAAO9eLpMIMYIQJi9DcYtKv6KtnHgB4yoAZSXKAyDy1rjoAzjzOQLrx8+4OanCAZnxiExGSEKmz3lj2lwUq3SZ3WZPbKuXGgxu9t4tLYDTkpIRQILF0x2G4lWipM7gj/oJQUkcXsCDCIFATULBCIcZ2tvB3QLDxETFnR/BgU/gRt9jX0gnpYMkJZpFzEoqQqJKAIBaQOVKHAXr3t7txgBjboSvB8EpLoFZywOAo3LFE5lYs/QW9LT1TRk1V7S2xYJADs=) no-repeat center;
+    background-size: 14px 19px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+
+  .search-bar > .voice:hover > .voice-icon {
+    opacity: 0.8;
+  }
+
+  .search-bar > .voice > em {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -44px;
+    background: #333;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 7px 10px;
+    white-space: nowrap;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+  }
+
+  .search-bar > .voice:hover > em {
+    display: block;
+  }
+
+  .search-bar > .voice > em:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    margin-left: -7px;
+    border-top: 0;
+    border-bottom: 7px solid #333;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+
+  .search-buttons {
+    padding: 16px;
+    text-align: center;
+  }
+
+  .search-buttons > button {
+    margin: 0 7px;
+    border: 1px solid #dcdcdc;
+    font-size: 11px;
+    background: #f5f5f5;
+    font-weight: bold;
+    padding: 7px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .search-buttons > button:hover {
+    border-color: #c6c6c6;
+    color: #222;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  }
+
+  .search-buttons > .search-buttons-lucky {
+    display: inline-block;
+    padding: 0 5px;
+    height: 29px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  .search-buttons-lucky > strong {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .search-buttons-lucky:hover > strong {
+    position: relative;
+    top: -135px;
+    left: 0;
+    transition: top 1s;
+  }
+
+  .search-buttons-lucky > strong > span {
+    display: block;
+    padding: 7px 0;
+  }
+
+  /* FOOTER */
+
+  footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #e4e4e4;
+    background: #f2f2f2;
+  }
+
+  footer > .footer-left {
+    float: left;
+  }
+
+  footer > .footer-right {
+    float: right;
+  }
+
+  footer > ul {
+    padding: 0 15px;
+  }
+
+  footer > ul > li {
+    float: left;
+    padding: 12px 15px 13px 15px;
+  }
+
+  footer > ul > li > a {
+    color: #666;
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="group">
+    <ul class="group">
+      <li><a href="#">+You</a></li>
+      <li><a href="#">Mail</a></li>
+      <li><a href="#">Images</a></li>
+      <li><span class="icon-grid"></span></li>
+      <li class="user-dropdown"><a href="#">jonathan@appacademy.io</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <figure>
+    <img src="img/google.png" alt="Google">
+  </figure>
+
+  <form>
+
+    <div class="search-bar">
+      <input type="text" value="" autofocus>
+
+      <div class="voice">
+        <span class="voice-icon"></span>
+        <em>Search by voice</em>
+      </div>
+    </div>
+
+    <div class="search-buttons">
+      <button>Google Search</button>
+      <button class="search-buttons-lucky">
+        <strong>
+          <span>I'm Feeling Lucky</span>
+          <span>I'm Feeling Hungry</span>
+          <span>I'm Feeling Puzzled</span>
+          <span>I'm Feeling Trendy</span>
+          <span>I'm Feeling Stellar</span>
+          <span>I'm Feeling Playful</span>
+        </strong>
+      </button>
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="group">
+  <ul class="footer-left group">
+    <li><a href="#">Advertising</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <ul class="footer-right group">
+    <li><a href="#">Privacy &amp; Terms</a></li>
+    <li><a href="#">Settings</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

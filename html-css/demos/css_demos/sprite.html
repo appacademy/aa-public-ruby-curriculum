@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sprite</title>
+  <style>
+
+  html, body, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    text-align: inherit;
+    box-sizing: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 200px;
+  }
+
+  button {
+    /* background-image: url("img/speaker-0.png"); */
+    background-image: url("img/speaker-sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 300px 900px;
+    background-color: yellow;
+
+    display: block;
+    margin: auto;
+
+    /*
+    We are pushing the text out of the container.
+    We do this by leveraging padding and setting
+    the height to zero. Hiding the overflow will
+    crop out the text that no longer fits in the
+    allotted space.
+    */
+
+    width: 300px;
+    height: 0;
+    padding-top: 300px;
+    overflow: hidden;
+
+    cursor: pointer;
+    border-radius: 50px;
+
+    /*
+    To visualize the hover state change and sprite
+    moving, uncomment the transition line below.
+    */
+
+    /* transition: background-position 0.5s; */
+  }
+
+  button:hover {
+    /*
+    Since we are using a sprite as background image,
+    which contains images for all states, we only need
+    to change the position of the background image.
+    You could say that the button element is a viewport
+    into a subarea of the bigger sprite image.
+    */
+
+    background-position: 0 -300px;
+    /* background-image: url("img/speaker-1.png"); */
+  }
+
+  button:active {
+    background-position: 0 -600px;
+    /* background-image: url("img/speaker-2.png"); */
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <button>Turn Up Volume</button>
+
+</body>
+</html>

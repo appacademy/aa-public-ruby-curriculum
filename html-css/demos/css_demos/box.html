@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Box Model</title>
+  <style>
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  div {
+    /*
+    See notes about display property and
+    difference between `none`, `inline` and `block`.
+
+    Block elements:
+    - expand to full width of parent container
+    - only take up minimum height to accomodate content
+    - cannot have any other elements next to them
+    */
+    display: block;
+
+    background: red;
+
+    /* Size content inside of element can occupy */
+    width: 100px;
+    height: 100px;
+
+    /* White space inside block element */
+    padding: 20px;
+
+    /* Border as part of element */
+    border: 5px solid blue;
+
+    /*
+    The default box model dictates that an element's
+    size is the sum of its width/height, its padding,
+    and its border. In this case that would be:
+    5 + 20 + 100 + 20 + 5 = 150 pixels
+    */
+
+    /*
+    Margin is private space outside element,
+    no other element can come closer than this.
+    */
+    margin: 50px;
+  }
+
+  p {
+    display: block;
+    background: yellow;
+
+    /*
+    To demonstrate how margin colapses,
+    this margin is bigger. Think of it as
+    arms-length private space, whomever's arm
+    is longer, thats how far to stay away.
+    */
+    margin: 100px;
+  }
+
+  span {
+    display: inline;
+    background: pink;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div>I am a block DIV</div>
+
+  <!-- See how there is 100px total margin between the <div> and <p> -->
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div>I am a block DIV</div>
+
+  <!-- There only is 50px margin between two <divs> -->
+
+  <div>I am a block DIV</div>
+
+  <!-- Here are a couple inline elements. Notice how they all are on the same line. They flow as text would flow, and it's best to think of them as words flowing in a paragraph. Also notice the spaces between the elements on the page. All spaces get collapsed to a single space, and just as you would want spaces to show up between words in a paragraph, spaces show up between inline elements. -->
+
+  <span>I am an inline SPAN</span>
+
+  <span>I am an inline SPAN</span>
+
+  <span>I am an inline SPAN</span>
+
+</body>
+</html>

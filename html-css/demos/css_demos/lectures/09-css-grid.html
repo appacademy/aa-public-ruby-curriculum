@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GRID</title>
+  <style>
+
+  html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+
+  ul {
+    border: 5px solid black;
+    background: orange;
+    width: 300px;
+    margin: 50px auto;
+  }
+
+  li {
+    border: 5px solid black;
+    background: yellow;
+
+    width: 90px;
+    height: 90px;
+
+    float: left;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <ul class="group">
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <!-- inject clearfix here -->
+  </ul>
+
+
+</body>
+</html>

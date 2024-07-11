@@ -1,0 +1,107 @@
+$primary-color: rgb(60, 60, 60);
+
+body {
+  font-family: sans-serif;
+  color: $primary-color;
+}
+
+ul {
+  overflow: auto;
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+a.active {
+  font-weight: bold;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+input, textarea {
+  border: 1px solid $primary-color;
+}
+
+input, button {
+  height: 1.9rem;
+  padding: 0 8px;
+}
+
+input, button, textarea {
+  border-radius: 0.3rem;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  &:disabled {
+    background: rgb(238, 238, 238);
+    color: rgb(175, 175, 175);
+    border: none;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  $accent-color: rgb(215, 243, 248);
+
+  background: rgb(224, 250, 255);
+  border: 2px solid $accent-color;
+  color: rgb(36, 105, 119);
+  font-weight: bold;
+
+  &:hover:not(:disabled) {
+    background: $accent-color;
+  }
+}
+
+.btn-delete {
+  background:rgb(245, 231, 231);
+  border: 2px solid rgb(247, 144, 144);
+  color: rgb(161, 11, 11);
+  height: 1.4rem;
+  width: 1.4rem;
+  
+  &:hover:not(:disabled) {
+    background:rgb(246, 214, 214);
+  }
+}
+
+.reaction {
+  font-size: 1.5em;
+}
+
+.message__author {
+  font-weight: bold;
+  display: block;
+}
+
+.message__timestamp {
+  font-size: 0.8rem;
+  color: rgb(158, 153, 153);
+}
+
+.message p {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  
+  strong {
+    color: rgb(33, 104, 163);
+    font-weight: bold;
+  }
+}

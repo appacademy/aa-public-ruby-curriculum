@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cat Tagger!</title>
+  <style>
+
+  html, body, h1, figure, figcaption, img {
+    /*
+      Reset the tags on the page to prevent any
+      default browser styles.
+    */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: white;
+    color: black;
+  }
+
+  img {
+    /*
+      Make the image a block (rather than the default of inline)
+      to prevent line-height spacing at the bottom of the image.
+      Comment this out to see the difference.
+    */
+    display: block;
+
+    /*
+      Stretch the image to fill the parent container (.photo). The
+      height is set to auto to grow it proportionally.
+    */
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin: 30px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .photo {
+    /*
+      Very important! Set the parent of the .tag element to
+      relative to force a new coordinate system for the image.
+    */
+    position: relative;
+
+    /*
+      Margin auto for left and right margin properties align
+      it in the center.
+    */
+    margin: 30px auto;
+
+    /*
+      Style the photo container. As the coordinates of the tags
+      are relative in percentages, we only need to modify the width
+      of the this photo container to account for a larger image.
+    */
+    width: 600px;
+    border: 10px solid black;
+    background: #888;
+
+    /*
+      Hide any part of the children that stick out beyond the borders
+      of this .photo box. This may or may not be desired, but looks
+      good in this demo.
+    */
+    overflow: hidden;
+
+    /*
+      A crosshair is _so much_ better.
+    */
+    cursor: crosshair;
+  }
+
+  .photo > img {
+
+    /*
+      A low z-index as the tag and caption should be on top.
+      By giving it a relative position, we can set its z-index.
+    */
+    z-index: 1;
+    position: relative;
+  }
+
+  .photo > figcaption {
+    display: block;
+
+    /*
+      We want the caption to be inset 20 pixels. By making it absolute
+      we lift it out of the document flow and place it on top of other
+      content that follows. Its coordinates are relative to the top
+      left corner of the nearest ancesor that is not positioned static.
+      In our case we purposefully set the .photo box to relative
+      positioning as to enforce a new coordinate system.
+    */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px;
+    background: yellow;
+
+    /*
+      Stacking order should be higher than the image.
+    */
+    z-index: 2;
+  }
+
+  .photo > .tag {
+    /*
+      Hide by default.
+    */
+    display: none;
+
+    /*
+      Position it absolute, to lift it out of the regular
+      document flow. Set top/left to 0, they will be overwritten
+      by our JavaScript function.
+    */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*
+      Regular styling, the full size will be 100 x 100.
+    */
+    width: 90px;
+    height: 90px;
+    border: 5px solid blue;
+    background: transparent;
+
+    /*
+      Put it on top. A higher number is closer to the viewer.
+    */
+    z-index: 3;
+
+    /*
+      Nudge half its height and length to account for box size,
+      as top/left position should be in the center.
+    */
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+
+  .photo.is-tagged > .tag {
+    /*
+      Use a modifier class to represent state and show the tag.
+    */
+    display: block;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>Cat Tagger!</h1>
+
+  <figure class="photo">
+    <div class="tag"></div>
+    <figcaption>Click on a cat to frame it!</figcaption>
+    <img src="img/cats.jpg" alt="Cats">
+  </figure>
+
+<script src="js/jquery.js"></script>
+<script>
+
+$(document).ready(function(){
+
+  var $photo = $(".photo");
+  var $tag = $photo.find(".tag");
+
+  $photo.on("click", function(event){
+
+    event.preventDefault();
+    console.log("event -->", event);
+
+    $photo.addClass("is-tagged");
+
+    // We want x and y in percentages relative to the
+    // top left corner of the photo.
+
+    var x = ((event.pageX - $photo.offset().left) / $photo.outerWidth()) * 100;
+    var y = ((event.pageY - $photo.offset().top) / $photo.outerHeight()) * 100;
+
+    console.log("x, y", x, y);
+
+    // Set the inline style of the tag.
+    // The rest is taken care for by the css.
+
+    $tag.css({
+      left: x + "%",
+      top: y + "%"
+    });
+  });
+});
+
+</script>
+</body>
+</html>

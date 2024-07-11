@@ -1,0 +1,1 @@
+json.extract! mention, :id, :user_id, :message_id, :read

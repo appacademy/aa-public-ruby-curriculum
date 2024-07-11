@@ -1,0 +1,229 @@
+
+html {
+  box-sizing: border-box;
+  background: #A9DBB8;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+h1 {
+  color: #F0F2EF;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+
+/* Phase 1: Clock */
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome {
+  font-weight: 400;
+  margin-top: 100px;
+}
+
+.clock-holder{
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-weight: 400;
+  border: .5px solid #F0F2EF;
+  border-radius: 3px;
+  margin: 50px 10px 50px 50px;
+}
+
+#clock {
+  padding: 14px;
+}
+
+/* Phase 2: Drop down */
+.drop-down-dog-nav {
+  width: 200px;
+  height: 50px;
+  border: .5px solid #F0F2EF;
+  margin: 50px 50px 50px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #F0F2EF;
+  color:#767B91;
+}
+
+.drop-down-dog-nav:hover {
+  background-color: #F0F2EF;
+  color:#767B91;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+
+.drop-down-dog-nav > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #F0F2EF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: left;
+}
+
+.drop-down-dog-nav > h3 {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.dog-link {
+  display: none;
+  color:#767B91;
+  text-decoration: none;
+}
+
+.dog-link > a {
+  color: #767B91;
+}
+
+.dog-link.open {
+  display: block;
+  margin: 5px 5px 10px 5px;
+  font-size: 16px;
+}
+
+.dog-link.open::after {
+  padding: 20px
+}
+
+ /* Phase 3: Todo List */
+
+ .todo-container {
+  max-width: 700px;
+  margin: 100px auto 0px;
+  background:#F0F2EF;
+  padding: 40px;
+ }
+
+  .todo-container > h2 {
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline;
+    padding-bottom: 15px;
+  }
+
+  .add-todo-form > input[name="add-todo"] {
+    font-size: 14px;
+    color: #333;
+    font-size: 14px;
+    padding: 9px 7px 7px;
+    border: 1px solid #E1E4DF;
+    border-bottom: 1px solid #E1E4DF;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    min-width: 250px;
+  } 
+
+
+  .add-todo-form > input[type="submit"] {
+    font-size: 14px;
+    color: #333;
+    font-size: 14px;
+    padding: 9px 7px 7px;
+    border: 1px solid #E1E4DF;
+    border-bottom: 1px solid #E1E4DF;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+  } 
+
+/*  Phase 4: Slide In & Out Classes */
+.slide-and-scroll {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #F0F2EF;
+  padding: 40px;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+ /* Phase 5: Filtered Search */
+
+.final-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 40px
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 10px 10px 10px 10px;
+  background: white;
+  padding: 40px;
+}
+
+.search {
+  font-size: 14px;
+  color: #333;
+  font-size: 14px;
+  padding: 9px 7px 7px;
+  border: 1px solid #E1E4DF;
+  border-bottom: 1px solid #E1E4DF;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+}
+
+ /* Phase 6: Weather */
+
+ .weather{ 
+    max-width: 700px;
+    margin: 10px 10px 10px 100px;;
+    background: white;
+    padding: 80px;
+    max-height: 0px;
+ }
+
+ .weather > input {
+    font-size: 14px;
+    color: #333;
+    font-size: 14px;
+    padding: 9px 7px 7px;
+    border: 1px solid #E1E4DF;
+    border-bottom: 1px solid #E1E4DF;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+ }

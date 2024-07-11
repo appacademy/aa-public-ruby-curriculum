@@ -1,0 +1,29 @@
+<h2 class='page-header'>Sign up!</h2>
+
+<ul class='errors'>
+  <% @user.errors.full_messages.each do |err_msg| %>
+    <li><%= err_msg %></li>
+  <% end %>
+</ul>
+
+<form class='simple-form' action="/users" method="POST">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>"/>
+    <div>
+      <label for="user_username">Username</label>
+      <input
+        type="text"
+        name="user[username]"
+        id="user_username"
+        value="<%= @user.username %>">
+    </div>
+    <div>
+      <label for="user_password">Password</label>
+      <input type="password" name="user[password]" id="user_password">
+    </div>
+
+  <input type="submit" value="Create User!"/>
+  <a href="<%= new_session_url %>">Already have an account? Log In</a>
+</form>

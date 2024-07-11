@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Hipster Input</title>
+  <style>
+
+  html, body, form, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  input[type="text"] {
+    -webkit-appearance: none;
+    display: inline-block;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    width: auto;
+    font: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    color: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    padding: 200px 0;
+  }
+
+  form {
+    width: 500px;
+    margin: auto;
+    color: gray;
+  }
+
+  .input > input {
+    width: 500px;
+    font-size: 100px;
+    font-weight: bold;
+    color: gray;
+    border-bottom: 10px solid gray;
+  }
+
+  .input > input:focus {
+    color: black;
+    border-color: black;
+  }
+
+  .input > label {
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  </style>
+</head>
+<body>
+
+  <form>
+
+    <div class="input">
+      <input type="text" value="" id="cat-name" name="cat[name]">
+      <label for="cat-name">Your cat's name</label>
+    </div>
+
+  </form>
+
+</body>
+</html>

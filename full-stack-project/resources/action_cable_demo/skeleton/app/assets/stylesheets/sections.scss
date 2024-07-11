@@ -1,0 +1,253 @@
+nav {
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  justify-content: end;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(92, 82, 64);
+  padding-right: 10%;
+}
+
+.home {
+  background: rgb(255, 248, 237);
+  display: grid;
+  grid-template-columns: 25% 55% 20%;
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  width: 100%;
+
+  section {
+    background: rgb(253, 252, 250);
+    max-height: calc(100vh - 50px);
+    padding: 2vw;
+  }
+}
+
+.rooms-index, .room {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgb(92, 82, 64);
+
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.rooms-index, .room, .mentions {
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.5rem;
+  }
+}
+
+.room li:not(:last-child), 
+.mentions a:not(:last-child) li {
+  border-bottom: 1px solid rgb(200, 198, 186);
+}
+
+.rooms-index {
+  a {
+    padding: 8px;
+    flex-grow: 1;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: rgb(240, 240, 240);
+    }
+  }
+
+  form {
+    button {
+      align-self: flex-end;
+      margin-top: 10px;
+    }
+  }
+}
+
+.room {
+  li {
+    padding: 10px;
+
+    &:focus {
+      background: rgb(251, 244, 229);  
+    }
+  }
+
+  li:focus {
+    background: rgb(251, 244, 229);
+  }
+
+  form {
+    textarea {
+      resize: none;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .message-controls {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .reaction {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.online-users {
+  li {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    height: 2em;
+  }
+  
+  .reaction {
+    display: inline-block;
+    width: 1.3em;
+    transform: translateY(-5%);
+  }
+
+  .current {
+    font-weight: bold;
+  }
+}
+
+.mentions, .logout {
+  user-select: none;
+  position: relative;
+}
+
+.navbar .dropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background: rgb(253, 252, 250);
+  padding: 2vw;
+  box-shadow: 2px 2px 10px grey;
+  border-radius: 10px;
+}
+
+.logout {
+  > span {
+    font-weight: bold;
+    color: rgb(36, 105, 119);
+    cursor: pointer;
+
+    svg {
+      margin-left: 5px;
+      min-width: 15px;
+    }
+  }
+
+  .dropdown {
+    top: 150%;
+  }
+}
+
+.mentions {
+  li {
+    padding: 10px 0;
+  }
+
+  .mentions__button {
+    font-size: 1.7em;
+    color: rgb(98, 98, 98);
+    cursor: pointer;
+  }
+
+  .unread-counter {
+    position: absolute;
+    background-color: hsl(0, 80%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -50%;
+    top: -20%;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 1;
+    font-size: 0.8em;
+  }
+
+  &.unseen {
+    .mentions__button {
+      color: black;
+    }
+
+    .unread-counter {
+      background-color: hsl(0, 100%, 50%);
+    }
+  }
+
+  .dropdown {
+    top: 115%;
+    min-width: 30vw;
+    max-height: 50vh;
+  }
+
+  .read {
+    opacity: 0.4;
+  }
+
+  .mention-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-self: stretch;
+
+    span {
+      font-weight: bold;
+      color: rgb(81, 21, 138);
+    }
+  }
+}
+
+.session-page {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .errors {
+    color: rgb(110, 8, 8);
+    height: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+
+    input {
+      margin-left: 20px;
+    }
+  }
+  
+  .demo-btns {
+    margin-top: 30px;
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    
+    button {
+      margin: 20px;
+    }
+  }
+}

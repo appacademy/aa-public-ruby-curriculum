@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    Center Navigation Bar With Floats,
+    Using Inline-Block (for Tristan!)
+  </title>
+
+  <style>
+
+    html, body, header, ul, li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-weight: bold;
+      background: white;
+      color: black;
+    }
+
+    .group:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /*
+      Notice the center for text here.
+      This will center all inline items.
+    */
+    header {
+      background: gray;
+      text-align: center;
+    }
+
+    /*
+      We make this guy inline-block to be able to center it.
+      Outwardly it now behaves as an inline element.
+      It will take up the minimum width necessary.
+
+      We want to avoid vertical-align being set to baseline,
+      that would leave a little space at the bottom.
+      Setting vertical align to top will get rid of this space.
+
+      Inside of it, it will act as a block.
+      We can float our <li>'s inside.
+    */
+    ul {
+      display: inline-block;
+      background: yellow;
+      list-style: none;
+      vertical-align: top;
+    }
+
+    /*
+      Here we float!
+    */
+    li {
+      float: left;
+      margin: 10px;
+      background: green;
+      padding: 20px;
+      color: white;
+    }
+
+    /*
+
+      GENERAL NOTE:
+
+      Avoid inline-blocks as much as possible!
+      They should only be a last resort, as in this case.
+      The reason is that they act as inline elements.
+
+      Inline elements obey line-height and other text
+      styling properties and most likely give you
+      slightly-off layout problems.
+
+      Here we are using it to our advantage, as an inline
+      element takes up the minimum necessary amount of width,
+      as well as obeys the text-align property to center it.
+
+      This could not be accomplished with floats, as there is no
+      center float. If we had a fixed size of our <ul> we could
+      have use margin: auto. However, the <ul> size is uncertain,
+      as it should take up the minimum size necessary.
+
+    */
+  </style>
+</head>
+<body>
+
+  <header>
+    <ul class="group">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+    </ul>
+  </header>
+
+</body>
+</html>

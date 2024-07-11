@@ -1,0 +1,44 @@
+.users {
+
+  flex-direction: column;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+    a {
+      font-size: 20px;
+      color: #1da1f2;
+    }
+
+    button {
+      margin: 0px;
+    }
+  }
+}
+
+.user-detail {
+  display: flex;
+
+  .users {
+    width: 300px;
+    min-height: 200px;
+    padding: 20px;
+    background-color: white;
+    margin-left: 50px;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    li {
+      color: #1da1f2;
+    }
+
+    p {
+      margin: 10px;
+      font-size: 16px;
+    }
+  } 
+}

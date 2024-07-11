@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SYNTAX</title>
+  <style>
+
+  /*
+
+  SYNTAX
+
+  selector {
+    property: value;
+  }
+
+  SELECTORS
+  =========
+
+  # BAD
+  1) !important
+  2) inline css `style="color:orange;"`
+  3) id `#cat-one-1`
+
+  # GOOD
+  4) class `.favorite`
+  5) element `<p>`
+
+  SPECIFICITY MATTERS
+  IF ALL IS EQUAL LAST DECLARED RULE WINS
+
+  */
+
+  #cat-one-1 {
+    color: purple;
+  }
+
+  .favorite {
+    color: red;
+  }
+
+  .special {
+    color: green;
+  }
+
+  p {
+    color: blue;
+  }
+
+  p {
+    color: gray !important;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>My Amazing Document</h1>
+
+  <section>
+    <article>
+
+      <h2>Cats</h2>
+      <p id="cat-one-1" class="favorite special">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article>
+      <h2>Lasers</h2>
+      <p style="color:orange;" class="favorite">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article>
+      <h2>Clouds</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+  </section>
+
+</body>
+</html>

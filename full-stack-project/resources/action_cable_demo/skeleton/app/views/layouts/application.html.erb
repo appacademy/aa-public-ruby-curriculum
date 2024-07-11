@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Action Cable Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- Your code here -->
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          id: <%= current_user.id %>,
+          username: "<%= current_user.username %>"
+        }
+      </script>
+    <% end %>
+
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

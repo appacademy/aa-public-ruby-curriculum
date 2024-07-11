@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Center Child Vertical</title>
+  <style>
+
+  html, body, h1, figure, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h1 {
+    margin: 20px 0;
+    font-size: 60px;
+  }
+
+  figure {
+    /*
+    Create a coordinate system for absolute
+    positioned `img` child tag.
+    */
+    position: relative;
+
+    margin: 20px auto;
+    width: 200px;
+    height: 100px;
+    border: 10px solid black;
+    overflow: hidden;
+  }
+
+  img {
+    /*
+    Center the image vertically by positioning
+    its `top` 50% of the height of the parent,
+    which pushes it down, then adjust it upwards
+    -50% its own height with `translateY`.
+    */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>
+    Center<br>
+    Child<br>
+    Vertical
+  </h1>
+
+  <figure>
+    <img src="img/cat.jpg" alt="Cat">
+  </figure>
+
+</body>
+</html>

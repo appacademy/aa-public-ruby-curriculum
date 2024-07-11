@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Positioning</title>
+  <style>
+
+  /*
+  Our, by now common, reset!
+  Note when to use inherit and
+  when to set an actual value.
+  */
+
+  html, body, h1, figure, figcaption, p, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  /*
+  This is a reset for images,
+  making them blocks, preventing
+  that pesky sliver of white space
+  from showing up below it, as
+  well as having them stretch
+  proportionally to fill the
+  parent container.
+  */
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    /*
+    A sans-serif font always looks
+    better, especially on low
+    resolution screens :)
+    */
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background: white;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin: 30px 0 0 0;
+  }
+
+  /*
+  We position the <figure> element
+  `relative` in order to create a
+  new coordinate system for its
+  `absolute` positioned children.
+  */
+
+  figure {
+    position: relative;
+    margin: 30px auto;
+    border: 10px solid black;
+    width: 500px;
+  }
+
+  figcaption {
+    position: absolute;
+
+    /*
+    Left and top coordinates are
+    relative to its closest non-static
+    positioned ancestor. In our case
+    this is the <figure> element, which
+    we set to `relative` for this very
+    purpose. What would happen
+    if we hadn't?
+    */
+
+    left: 20px;
+    top: 20px;
+
+    color: white;
+    background: green;
+    padding: 10px 20px;
+  }
+
+  .img-glasses {
+    /*
+    We're using display `none` here
+    to prevent the element from
+    rendering by default. Setting it
+    back to `block` later will cause
+    it to show up.
+    */
+    display: none;
+    position: absolute;
+    left: 80px;
+    top: 190px;
+    width: 400px;
+
+    /*
+    Experimental CSS3 property that
+    needs to be browser prefixed to
+    target Safari. We're also including
+    the unprefixed version to target
+    browsers that have full support.
+    http://caniuse.com/#feat=transforms2d
+    */
+    -webkit-transform: rotate(-13deg);
+    transform: rotate(-13deg);
+  }
+
+  /*
+  Using the :hover pseudo selector,
+  we're only selecting the glasses
+  image inside of <figure>s that are
+  hovered over. Can you reason why
+  we don't put the :hover selector
+  on .img-glasses, but on the parent
+  instead?
+  */
+
+  figure:hover .img-glasses {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Positioning</h1>
+
+  <p>Hover over the image to see something remarkable.</p>
+
+  <figure>
+    <figcaption>This is a happy cat.</figcaption>
+    <img src="img/cat.jpg" class="img-cat" alt="Cat">
+    <img src="img/glasses.png" class="img-glasses" alt="Glasses">
+  </figure>
+
+</body>
+</html>

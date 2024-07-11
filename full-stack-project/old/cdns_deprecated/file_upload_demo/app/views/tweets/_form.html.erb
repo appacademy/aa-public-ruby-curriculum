@@ -1,0 +1,29 @@
+<ul>
+  <% tweet.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+
+<% if tweet.persisted? %>
+  <% url = tweet_url(tweet.id) %>
+  <% button_text = "Update tweet!" %>
+<% else %>
+  <% url = tweets_url %>
+  <% button_text = "Create tweet!" %>
+<% end %>
+
+<form action="<%= url %>" method="POST">
+  <% if tweet.persisted? %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
+  <label for="tweet_body">Tweet Body</label>
+  <input type="text" name="tweet[body]" value="<%= tweet.body %>" id="tweet_body">
+
+  <label>
+    Author ID
+    <input type="text" name="tweet[author_id]" value="<%= tweet.author_id %>">
+  </label>
+
+  <input type="submit" value="<%= button_text %>">
+</form>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GLASSES</title>
+  <style>
+
+  /* RESET */
+
+  html, body, h1, figure,
+  figcaption, img {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+
+    background: transparent;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  figure {
+    position: relative;
+
+    margin: 50px auto;
+    border: 10px solid black;
+    width: 400px;
+  }
+
+  figcaption {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    padding: 10px 20px;
+    background: green;
+    color: white;
+  }
+
+  .img-cat {
+
+  }
+
+  .img-glasses {
+    position: absolute;
+
+    left: 85px;
+    top: -160px;
+
+    width: 280px;
+    transform: rotate(-375deg);
+
+    opacity: 0;
+    transition: opacity 1s, top 1s, transform 1s;
+  }
+
+  figure:hover .img-glasses {
+    transform: rotate(-15deg);
+    top: 160px;
+    opacity: 1;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>Glasses</h1>
+
+  <figure>
+    <figcaption>Happy Cat</figcaption>
+    <img src="cat.jpg" alt="Cat" class="img-cat">
+    <img src="glasses.png" alt="Glasses" class="img-glasses">
+  </figure>
+
+
+</body>
+</html>

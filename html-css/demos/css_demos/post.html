@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Posts</title>
+  <style>
+
+/* --- Reset user agent styles --- */
+
+html, body, section, article, header, div, p, h3, img, a, time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* --- Set basic html elements --- */
+
+body {
+  font-family: sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+section, article, header {
+  display: block;
+}
+
+a {
+  color: #00f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* --- Helper methods (clearfix) --- */
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* --- Posts collection --- */
+
+.posts {
+  margin: 50px auto;
+  width: 480px;
+  border: 10px solid #ddd;
+}
+
+/* --- Individual post object --- */
+
+.post {
+  border-top: 10px solid #ddd;
+}
+
+/*
+  Reset border for top post to avoid
+  double border of posts collection.
+*/
+
+.post:first-child {
+  border-top: 0;
+}
+
+/*
+  The post header is the wrapper box
+  containing the floated thumbnail
+  and info boxes. The .group is applied
+  to the header to clear these floats.
+*/
+
+.post-header {
+  border-bottom: 5px solid #ddd;
+}
+
+.post-header-thumbnail {
+  float: left;
+  padding: 20px;
+  width: 50px;
+}
+
+.post-header-thumbnail > a {
+  display: block;
+  border: 3px solid #00f;
+}
+
+.post-header-thumbnail img {
+}
+
+.post-header-info {
+  float: left;
+  padding: 20px 20px 20px 0;
+}
+
+.post-header-info > h3 {
+  font-weight: bold;
+}
+
+.post-header-info > time {
+  display: block;
+  color: #999;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="posts">
+
+    <article class="post">
+      <header class="post-header group">
+
+        <div class="post-header-thumbnail">
+          <a href="#"><img src="img/cat.jpg" alt=""></a>
+        </div>
+
+        <div class="post-header-info">
+          <h3><a href="#">Jonathan Tamboer</a></h3>
+          <time>3 hours ago</time>
+        </div>
+
+      </header>
+      <div class="post-content">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+    </article>
+
+    <article class="post">
+      <header class="post-header group">
+
+        <div class="post-header-thumbnail">
+          <a href="#"><img src="img/cat.jpg" alt=""></a>
+        </div>
+
+        <div class="post-header-info">
+          <h3><a href="#">Jonathan Tamboer</a></h3>
+          <time>3 hours ago</time>
+        </div>
+
+      </header>
+      <div class="post-content">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+    </article>
+
+    <article class="post">
+      <header class="post-header group">
+
+        <div class="post-header-thumbnail">
+          <a href="#"><img src="img/cat.jpg" alt=""></a>
+        </div>
+
+        <div class="post-header-info">
+          <h3><a href="#">Jonathan Tamboer</a></h3>
+          <time>3 hours ago</time>
+        </div>
+
+      </header>
+      <div class="post-content">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+    </article>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+header {
+  width: 100%;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  min-width: 600px;
+  max-width: 1000px;
+  width: 100%;
+  height: 60px;
+
+  background-color: white;
+
+  .logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 50px;
+    color: #1da1f2;
+    position: relative;
+    
+    tiny {
+      color: red;
+      font-size: 12px;
+      position: absolute;
+      transform: rotate(-40deg); 
+      top: 10px;
+      left: -10px;
+      background: pink;
+      padding: 0 5px;
+    }
+  }
+
+  .links {
+    display: flex; 
+    height: 100%;
+
+    li {
+      display: flex;
+      align-items: center; 
+
+      &:hover {
+        border-bottom: 3px solid rgb(101, 119, 134);
+      }
+
+      form {
+        height: 100%;
+      }
+
+      a, input[type='submit']{
+        height: calc(100% - 40px);
+        padding: 20px;
+        color: rgb(101, 119, 134);
+        background-color: white;
+      }
+    }
+  }
+}

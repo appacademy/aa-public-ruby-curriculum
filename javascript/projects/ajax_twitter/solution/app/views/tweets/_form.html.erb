@@ -1,0 +1,17 @@
+<form class="simple-form tweet-compose" data-tweets-ul="<%= tweets_ul %>">
+  <label for='tweet-textarea'>What's on your mind?</label>
+  <textarea id='tweet-textarea' 
+    name="tweet[content]" placeholder="What's on your mind?"></textarea>
+  <strong class="char-left"></strong>
+
+    <ul class="mentioned-users"></ul>
+
+  <ul class='tweet-actions'>
+    <li>
+      <button class="add-mentioned-user">Add mention</button>
+    </li>
+    <li>
+      <input type="submit" value="Post Tweet!">
+    </li>
+  </ul>
+</form>

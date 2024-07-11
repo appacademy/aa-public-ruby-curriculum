@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AjaxTwitter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Roboto');
+  </style>
+  <script type='text/javascript'>
+    window.users = <%= render("users/users.json.jbuilder", users: User.all).html_safe %>; 
+  </script>
+</head>
+<body>
+  <header>
+  <nav class='main-nav'>
+    <h1 class='logo'><tiny>AJAX</tiny>Twitter</h1>
+    <ul class='links'>
+      <li><a href="<%= feed_url %>">Feed</a></li>
+      <li><a href="<%= search_users_url %>">User Search</a></li>
+      <% if current_user %>
+        <li>
+          <form class='button-form' action="/session" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>"> 
+            <input type="submit" value="Logout!">
+          </form>
+        </li>
+      <% else %>
+        <li><a href='<%= new_session_url %>'>Login</a></li>
+        <li><a href='<%= new_user_url %>'>Signup</a></li>
+      <% end %>
+    </ul>
+  </nav>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+
+</body>
+</html>

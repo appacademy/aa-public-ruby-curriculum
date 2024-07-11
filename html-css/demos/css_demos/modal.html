@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Yodel a Modal</title>
+  <style>
+
+  html, body, section, article, h1, p, div, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  body {
+    font-family: sans-serif;
+    padding: 100px;
+  }
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .modal {
+    display: none;
+  }
+
+  .modal.is-active {
+    display: block;
+  }
+
+  .modal-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-content {
+    position: absolute;
+    z-index: 1000;
+
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+    padding: 50px;
+
+    margin-left: -250px;
+    transform: translateY(-50%);
+
+    background: white;
+    border-radius: 5px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .modal-close:hover {
+    color: black;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Yodel a <a href="#" class="js-show-modal">Modal</a>.</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <!-- THIS IS THE MODAL -->
+
+  <section id="modal" class="modal is-active">
+    <article class="modal-content">
+      <span class="modal-close js-hide-modal">&times;</span>
+
+      <h1>Hello, Modal!</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </article>
+    <div class="modal-screen js-hide-modal"></div>
+  </section>
+
+  <script src="js/jquery.js"></script>
+  <script>
+  $(document).ready(function(){
+
+    window.showModal = function(){
+      $("#modal").addClass("is-active");
+    }
+
+    window.hideModal = function(){
+      $("#modal").removeClass("is-active");
+    }
+
+    $("body").on("click", ".js-show-modal", window.showModal);
+    $("body").on("click", ".js-hide-modal", window.hideModal);
+
+  });
+  </script>
+</body>
+</html>

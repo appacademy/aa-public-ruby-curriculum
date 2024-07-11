@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fancy Checkbox</title>
+  <style>
+
+  html, body, h1, form, div, p, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 20px 0;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  form.checkbox {
+    /*
+    Making the form relative to create a
+    new coordinate system for its children.
+    */
+    position: relative;
+    margin: auto;
+    padding: 10px 20px;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    background: #eee;
+    color: #999;
+    overflow: hidden;
+  }
+
+  form.checkbox > p {
+    float: left;
+    line-height: 30px;
+    font-weight: 200;
+  }
+
+  form.checkbox > label {
+    /*
+    Because <label>s divert the click to
+    their associated <input>, thus selecting
+    and unselecting the checkbox in our case,
+    we can hide the actual <input> and treat
+    the <label> as if it were the checkbox,
+    giving us a flexible element to style.
+
+    We're using the plain label element as a
+    placeholder, floated to the right, having
+    it dictate row size. We want this to be
+    transparent, however, there's text in the
+    label. We hide this by setting height to
+    zero, overflow to hidden, and grow the
+    element to its desired height by setting
+    a top padding. This effectively pushes
+    the text outside of the element and
+    cuts it off.
+    */
+    float: right;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 55px;
+    height: 0;
+    padding: 30px 0 0 0;
+    overflow: hidden;
+  }
+
+  form.checkbox > label:before {
+    /*
+    Pill shape holder. Absolute positioned
+    pseudo-content. Has a transition set on
+    the background color to change from
+    white to green, when input is checked.
+    */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53px;
+    height: 28px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: background-color 0.2s;
+  }
+
+  form.checkbox > label:after {
+    /*
+    The slider knob. Rounded using border radius,
+    absolutely positioned, we will use the left
+    property to animate the slide. Added box
+    shadow to make the knob stand out and
+    afford interaction.
+
+    The knob is in front of the pill because, all
+    other things being equal, being defined later
+    in the document causes an element to be
+    stacked in front. Injecting the pill with
+    :before and the knob with :after pseudo-content
+    was an intentional choice. It could have been
+    done the other way, but I'd have to fix
+    stacking order using z-index.
+    */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: left 0.4s;
+  }
+
+  form.checkbox > input:checked + label:before {
+    /*
+    Using the adjacent sibling selector to grab
+    the state of the input checkbox when checked,
+    and use that to adjust the label pseudo-content.
+    */
+    background: #3f6;
+    border-color: #ccc;
+  }
+
+  form.checkbox > input:checked + label:after {
+    /*
+    Changing the left property of the knob,
+    in combination with the transition,
+    causes the sliding animation.
+    */
+    left: 30px;
+  }
+
+  form.checkbox > input {
+    /*
+    Hide the input checkbox by putting it
+    top left, outside the parent box, getting
+    cut off. We need to keep the element on the
+    page, and cannot hide it with display: none,
+    as it needs to render in order to function.
+    */
+    position: absolute;
+    left: -100px;
+    top: -100px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Fancy Checkbox</h1>
+
+  <form class="checkbox group">
+    <p>Special Cat Alerts</p>
+    <input type="checkbox" id="cat-checkbox" name="cat[checkbox]" value="1">
+    <label for="cat-checkbox">Enable</label>
+  </form>
+
+</body>
+</html>

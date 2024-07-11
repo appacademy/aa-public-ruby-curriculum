@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Single Page Layout</title>
+  <style>
+
+  html, body, header, main,
+  section, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  html {
+    /*
+    Use temporary background colors
+    while building your layouts to
+    easily see what you're doing.
+    */
+    background: green;
+  }
+
+  body {
+    background: purple;
+  }
+
+  html, body {
+    /*
+    We need to stretch both the <html>
+    and <body> element to the full height
+    of the viewport window. We get rid of
+    the scrollbars by setting `overflow`
+    to `hidden`.
+    */
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    /*
+    By giving the body a position relative
+    we create a new coordinate system for
+    our absolute positioned children.
+    */
+    position: relative;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .header {
+    background: pink;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    left: 0;
+    width: 100%;
+  }
+
+  .main {
+    /*
+    Notice how we use the `top` and
+    `bottom` properties to stretch out
+    the element.
+    */
+    background: green;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .sidebar {
+    /*
+    We can use `height` here to stretch
+    the sidebar to the full height of its
+    parent `.main` container.
+    */
+    background: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .content {
+    /*
+    By setting `overflow` to `auto` we
+    allow for scrollbars when the content
+    doesn't fit into the visible part of
+    our container. This is important!
+    */
+    background: gray;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    right: 0;
+    height: 100%;
+    overflow: auto;
+  }
+
+  /* ADDITIONAL DEMO STYLES */
+
+  h1 {
+    padding: 20px;
+    font-size: 40px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 20px;
+  }
+
+  li:nth-child(odd) {
+    background: red;
+  }
+
+  p {
+    padding: 20px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Header</h1>
+  </header>
+
+  <main class="main">
+
+    <section class="sidebar">
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <h1>Content</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+  </main>
+</body>
+</html>

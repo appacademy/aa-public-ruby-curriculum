@@ -1,0 +1,2 @@
+!function(){"use strict";document.addEventListener("DOMContentLoaded",(function(){var t,e,n,a,d=(e=(t={src:"./dist/assets/banana.png",alt:"js oddities"}).src,n=t.alt,(a=document.createElement("img")).src=e,a.alt=n,a);document.body.append(d)}))}();
+//# sourceMappingURL=main.js.map

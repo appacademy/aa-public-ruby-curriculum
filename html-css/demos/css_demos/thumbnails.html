@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Thumbnails</title>
+  <style>
+
+  /* RESET */
+
+  html, body, div, figure, figcaption, nav, button, ul, li, img, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    vertical-align: inherit;
+    background: transparent;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    /*
+    We're forcing the button to behave like the default box
+    model other elements adhere to, all for simplicity's sake.
+    */
+    box-sizing: content-box;
+    -webkit-appearance: none;
+  }
+
+  img {
+    /*
+    Make all images block elements by default. This gets rid
+    of pesky line-height space, and has them stretch to fill
+    the width of the parent container while preserving aspect
+    ratio, adjusting height accordingly.
+    */
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* UTILS */
+
+  .group:after {
+    content: "";
+    display: block;
+    /*
+    Always clear your floats!
+    */
+    clear: both;
+  }
+
+  /* STYLES */
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .thumbnails {
+    text-align: center;
+  }
+
+  .thumbnails > figure {
+    margin: auto;
+    width: 400px;
+    border: 10px solid black;
+  }
+
+  .thumbnails figcaption {
+    padding: 10px;
+    background: #ccc;
+    font-weight: bold;
+  }
+
+  .thumbnails > nav {
+    margin: 10px 0;
+    /*
+    This element contains floats. Floating can only be done
+    right and left. In order to center a group of floated
+    elements, we make the parent container an inline-block.
+
+    Inline-block elements behave as inline elements in their
+    parent context, as if they were words in a paragraph.
+    This means the `text-align: center` property will apply,
+    and this element, containing a group of floats will be
+    aligned center.
+    */
+    display: inline-block;
+  }
+
+  .thumbnails button {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    border: 4px solid blue;
+    color: blue;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+
+  .thumbnails button:hover {
+    border-color: red;
+    color: red;
+  }
+
+  .thumbnails button.is-disabled {
+    cursor: default;
+    color: #ddd;
+    border-color: #ddd;
+  }
+
+  .thumbnails button:nth-child(1) {
+    /*
+    First button is on the left. Using pseudo-selector.
+    */
+    float: left;
+    margin-right: 5px;
+  }
+
+  .thumbnails button:nth-child(2) {
+    /*
+    Second button is on the right.
+    */
+    float: right;
+    margin-left: 5px;
+  }
+
+  .thumbnails ul {
+    float: left;
+  }
+
+  .thumbnails li {
+    display: none;
+    float: left;
+    margin: 0 5px;
+    height: 50px;
+    border: 5px solid black;
+    cursor: pointer;
+  }
+
+  .thumbnails li.is-visible {
+    display: block;
+  }
+
+  .thumbnails li.is-current {
+    border-color: purple;
+  }
+
+  .thumbnails li:hover {
+    border-color: red;
+  }
+
+  .thumbnails li > img {
+    /*
+    We're forcing the image to grow to the height of
+    the parent, while preserving the aspect ratio,
+    adjusting the width accordingly.
+    */
+    width: auto;
+    height: 100%;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Thumbnails</h1>
+
+  <div class="thumbnails">
+
+    <figure>
+      <img src="">
+      <figcaption></figcaption>
+    </figure>
+
+    <nav class="group">
+      <button data-dir="left">←</button>
+      <button data-dir="right">→</button>
+
+      <ul class="group">
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="aliquip aliqua in lorem culpa"></li>
+        <li><img
+          src="img/dog.jpg"
+          data-full-src="img/dog.jpg"
+          alt="labore nisi cupidatat velit nulla"></li>
+        <li><img
+          src="img/bunny.jpg"
+          data-full-src="img/bunny.jpg"
+          alt="consequat eiusmod amet dolor dolore"></li>
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="ut minim fugiat laboris aliqua"></li>
+        <li><img
+          src="img/dog.jpg"
+          data-full-src="img/dog.jpg"
+          alt="proident consectetur minim quis amet"></li>
+        <li><img
+          src="img/bunny.jpg"
+          data-full-src="img/bunny.jpg"
+          alt="adipisicing et sint dolore eiusmod"></li>
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="aliqua duis esse proident amet"></li>
+        <li><img
+          src="img/dog.jpg"
+          data-full-src="img/dog.jpg"
+          alt="incididunt sed sunt irure tempor"></li>
+        <li><img
+          src="img/bunny.jpg"
+          data-full-src="img/bunny.jpg"
+          alt="dolore duis exercitation laboris commodo"></li>
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="sit incididunt dolore ad est"></li>
+        <li><img
+          src="img/dog.jpg"
+          data-full-src="img/dog.jpg"
+          alt="labore in aliquip sint est"></li>
+        <li><img
+          src="img/bunny.jpg"
+          data-full-src="img/bunny.jpg"
+          alt="do sed qui commodo cupidatat"></li>
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="lorem pariatur officia culpa eu"></li>
+        <li><img
+          src="img/dog.jpg"
+          data-full-src="img/dog.jpg"
+          alt="esse adipisicing ut in eu"></li>
+        <li><img
+          src="img/bunny.jpg"
+          data-full-src="img/bunny.jpg"
+          alt="exercitation aute laboris culpa do"></li>
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="duis velit in laborum excepteur"></li>
+        <li><img
+          src="img/dog.jpg"
+          data-full-src="img/dog.jpg"
+          alt="tempor in nisi aute mollit"></li>
+        <li><img
+          src="img/bunny.jpg"
+          data-full-src="img/bunny.jpg"
+          alt="occaecat mollit incididunt nostrud aliqua"></li>
+        <li><img
+          src="img/cat.jpg"
+          data-full-src="img/cat.jpg"
+          alt="excepteur irure fugiat sunt eu"></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script>
+
+  $.Thumbnails = function (el) {
+    this.$el = $(el);
+
+    this.$figureImage = this.$el.find("figure > img");
+    this.$figureCaption = this.$el.find("figcaption");
+    this.$navItems = this.$el.find("li");
+    this.$buttonLeft = this.$el.find(".thumbnails-nav-left");
+    this.$buttonRight = this.$el.find(".thumbnails-nav-right");
+
+    this.navMax = 4;
+    this.navIdx = 0;
+    this.currentIdx = 0;
+
+    this.activate(this.currentIdx);
+    this.showNav();
+
+    this.$el.on("click", "li", (function(event) {
+      this.currentIdx = $(event.currentTarget).index();
+      this.activate(this.currentIdx);
+    }).bind(this));
+
+    this.$el.on("mouseenter", "li", (function(event) {
+      this.activate($(event.currentTarget).index());
+    }).bind(this));
+
+    this.$el.on("mouseleave", "li", (function(event) {
+      this.activate(this.currentIdx);
+    }).bind(this));
+
+    this.$el.on("click", "button", (function(event) {
+      var $button = $(event.currentTarget);
+      var dir = $button.attr("data-dir");
+
+      if (dir == "left" && (this.navIdx > 0)) {
+        this.navIdx -= 1;
+      } else if (dir == "right" &&
+                 ((this.navIdx + this.navMax) < this.$navItems.length)) {
+        this.navIdx += 1;
+      }
+      this.showNav();
+    }).bind(this));
+  };
+
+  $.Thumbnails.prototype.activate = function(idx) {
+    var $li = this.$navItems.eq(idx);
+    var $img = $li.find("img");
+
+    if (this.currentIdx == idx) {
+      this.$navItems.removeClass("is-current");
+      $li.addClass("is-current");
+    }
+
+    this.$figureImage.attr("src", $img.attr("data-full-src"));
+    this.$figureCaption.html($img.attr("alt"));
+  };
+
+  $.Thumbnails.prototype.showNav = function() {
+    this.$navItems.removeClass("is-visible");
+    this.showButtons();
+
+    this.$navItems.each((function (idx, element) {
+      if (idx < this.navIdx || idx >= this.navIdx + this.navMax) {
+        return;
+      }
+
+      $(element).addClass("is-visible");
+    }).bind(this));
+  };
+
+  $.Thumbnails.prototype.showButtons = function() {
+    var disableLeft = (this.navIdx == 0);
+    var disableRight = ((this.navIdx + this.navMax) >= this.$navItems.length);
+
+    this.$buttonLeft.toggleClass("is-disabled", disableLeft);
+    this.$buttonRight.toggleClass("is-disabled", disableRight);
+  }
+
+  $.fn.thumbnails = function() {
+    return this.each(function() {
+      new $.Thumbnails(this);
+    });
+  };
+
+  $(function() {
+    $(".thumbnails").thumbnails();
+  });
+
+  </script>
+</body>
+</html>

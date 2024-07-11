@@ -1,0 +1,37 @@
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>
+
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+amazon_dev:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+  secret_access_key:
+    <%= Rails.application.credentials.aws[:secret_access_key] %>
+  region: <%= Rails.application.credentials.aws[:region] %>
+  bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
+# Use rails secrets:edit to set the AWS secrets (as shared:aws:access_key_id|secret_access_key)
+
+# We have not setup these credentials for this project but this is what our setup would look like
+# for setting up our S3 development and production bucket configuration.
+# amazon_dev:
+#   service: S3
+#   access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+#   secret_access_key: <%= Rails.application.credentials.aws[:secret_access_key] %>
+#   region: <%= Rails.application.credentials.aws[:region] %>
+#   bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
+
+# Remember not to checkin your GCS keyfile to a repository
+# google:
+#   service: GCS
+#   project: your_project
+#   keyfile: <%= Rails.root.join("path/to/gcs.keyfile") %>
+#   bucket: your_own_bucket
+
+# mirror:
+#   service: Mirror
+#   primary: local
+#   secondaries: [amazon, google]

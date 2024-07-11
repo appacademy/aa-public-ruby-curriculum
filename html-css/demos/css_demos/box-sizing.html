@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Box Sizing</title>
+  <style>
+
+  html, body, form, h1, figure, figcaption, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 30px 0;
+    font-size: 60px;
+  }
+
+  figure {
+    margin: 60px 0;
+  }
+
+  figcaption {
+    margin: 30px 0 0 0;
+  }
+
+  div {
+    display: block;
+    margin: auto;
+
+    width: 100px;
+    height: 100px;
+
+    padding: 20px;
+
+    border: 5px solid black;
+    background: yellow;
+
+    text-align: left;
+    font-size: 10px;
+  }
+
+  .content-box {
+    box-sizing: content-box;
+  }
+
+  .border-box {
+    box-sizing: border-box;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Box Sizing</h1>
+
+  <figure>
+
+    <div class="content-box">
+      C O N T E N T B O X
+      C O N T E N T B O X
+      C O N T E N T B O X
+      C O N T E N T B O X
+      C O N T E N T B O X
+    </div>
+
+    <figcaption>
+      ← 150px total →<br>
+      <br>
+      total = width + padding + border<br>
+      5px + 20px + 100px + 20px + 5px
+    </figcaption>
+
+  </figure>
+
+
+  <figure>
+
+    <div class="border-box">
+      B O R D E R B O X
+      B O R D E R B O X
+    </div>
+
+    <figcaption>
+      ← 100px total →<br>
+      <br>
+      total = width = padding + border + remainder<br>
+      100px = 5px + 20px + remainder + 20px + 5px
+    </figcaption>
+
+  </figure>
+
+</body>
+</html>
