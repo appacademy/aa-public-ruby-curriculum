@@ -132,7 +132,7 @@ with a specific icon in your task menu.
 - [ ] 9. [Binary Trees & DFS Lecture](https://player.vimeo.com/video/337177768)
 - [ ] 10. [Binary Trees & DFS Lecture II](https://player.vimeo.com/video/337181557)
 - [ ] 11. [Intro data structures: PolyTreeNode](ruby/projects/poly_tree_node/README.md)
-  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/poly_tree_node/solution.zip
+  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/poly_tree_node/solution.zip)
 - [ ] 12. [Graph Intro](ruby/readings/graph_nodes_reading.md)
 - [ ] 13. [Graph Traversal](ruby/readings/graph_traversal_notes_reading.md)
 - [ ] 14. [Graph Nodes and BFS](ruby/homeworks/graphs/README.md)
@@ -165,11 +165,11 @@ with a specific icon in your task menu.
 - [ ] 17. [Class inheritance](ruby/projects/class_inheritance/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/class_inheritance/solution.zip)
 - [ ] 18. [Chess (Part One)](ruby/projects/chess/README.md)
-  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/chess/solution.zip
+  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/chess/solution.zip)
 - [ ] 19. [Chess (Part Two)](ruby/projects/chess/part_two.md)
-  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/chess/solution.zip
+  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/chess/solution.zip)
 - [ ] 20. [Chess (Part Three)](ruby/projects/chess/part_three.md)
-  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/chess/solution.zip
+  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/chess/solution.zip)
 - [ ] 21. [OOP Quiz 2](ruby/quizzes/oop_2.md)
 - [ ] 22. [Mancala](ruby/homeworks/mancala/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/ruby/homeworks/mancala/solution.zip)
