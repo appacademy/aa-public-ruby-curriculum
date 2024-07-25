@@ -66,4 +66,6 @@ Remember $O(1)$, or constant time, is the slowest growing in terms of time compl
 - [ ] $O(1)$
 
 <details><summary>Answer:</summary>$O(n!)$</details>
-<details><summary>Explanation:</summary>Whenever you have a problem where you are creating permutations, you are dealing with $factorial$ time complexity. E.g., if you call the $Array#permutation$ method of an array with the length of 3, then 3! permutations would be returned (6 permutations total). Increasing the length to 4 would then return 24 total permutations, or 4!.</details>
+<details><summary>Explanation:</summary>
+
+Whenever you have a problem where you are creating permutations, you are dealing with $factorial$ time complexity. E.g., if you call the `Array#permutation` method of an array with the length of 3, then 3! permutations would be returned (6 permutations total). Increasing the length to 4 would then return 24 total permutations, or 4!.</details>
