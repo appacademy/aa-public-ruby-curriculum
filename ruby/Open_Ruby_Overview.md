@@ -90,7 +90,7 @@ with a specific icon in your task menu.
   - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/word_chains/solution.zip)
 - [ ] 16. [More Recursion Questions (Bonus)](projects/more_recursion_exercises/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/more_recursion_exercises/solutions/recursion_problems.rb)
-- [ ] 17. [More Recursion Questions (Bonus)](projects/more_recursion_exercises/README.md)
+
 ### Git
 - [ ] 1. [Git: Overview and Why We Use Git](https://player.vimeo.com/video/171666454)
 - [ ] 2. [Git: Mental Models](https://player.vimeo.com/video/171666455)
@@ -238,7 +238,6 @@ with a specific icon in your task menu.
   - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/max_windowed_range/solution.zip)
 - [ ] 23. [Benchmarking (Bonus)](projects/benchmarking/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/ruby/demos/sorting_demo/sorting_demo.rb#L58-L67)
-- [ ] 24. [Benchmarking (Bonus)](projects/benchmarking/README.md)
 ### LRU Cache
 - [ ] 1. [Set and Int Set](https://player.vimeo.com/video/159431377)
 - [ ] 2. [Resizing Int Set Part 1](https://player.vimeo.com/video/159433039)
