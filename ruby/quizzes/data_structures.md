@@ -72,5 +72,7 @@
 - [ ] `H`
 - [ ] `I`
 
-<details><summary>Answer:</summary>`D`</details>
+<details><summary>Answer:</summary>
+
+`D`</details>
 <details><summary>Explanation:</summary>The root node refers to the top most node that has no parent node.</details>
