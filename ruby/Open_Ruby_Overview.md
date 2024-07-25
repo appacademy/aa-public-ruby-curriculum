@@ -66,7 +66,7 @@ with a specific icon in your task menu.
 - [ ] 18. [Memory Puzzle](ruby/projects/memory/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/memory/solution.zip)
 - [ ] 19. [Sudoku](ruby/projects/sudoku/README.md)
-  - [Solution](ttps://assets.aaonline.io/fullstack/ruby/projects/sudoku/solution.zip)
+  - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/sudoku/solution.zip)
 - [ ] 20. [Hash and Equals](ruby/readings/hash-and-equals.md)
 - [ ] 21. [Swap](ruby/readings/swap.md)
 
