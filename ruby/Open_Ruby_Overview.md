@@ -44,7 +44,6 @@ with a specific icon in your task menu.
   - [Soution](https://assets.aaonline.io/fullstack/ruby/projects/maze_solver/solution.zip)
 - [ ] 10. [Eight Queens Puzzle (Bonus)](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 - [ ] 11. [Project Euler (Bonus)](https://projecteuler.net/problems)
-- [ ] 11. [Project Euler (Bonus)](https://projecteuler.net/problems)
 ### Reference
 - [ ] 1. [References Video](https://player.vimeo.com/video/165965713)
 - [ ] 2. [References](readings/references.md)
