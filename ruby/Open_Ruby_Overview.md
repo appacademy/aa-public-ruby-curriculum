@@ -28,7 +28,7 @@ with a specific icon in your task menu.
 
 ## Lessons
 ### Getting Started
-- [ ] 1. [Setting up a Development Environment (Phase 1)](course/readings/dev-setup.md)
+- [ ] 1. [Setting up a Development Environment (Phase 1)](../course/readings/dev-setup.md)
 ### Enumerables and Debugging
 - [ ] 1. [Nontechnical Overview of Ruby](ruby/readings/ruby_nontech.md)
 - [ ] 2. [Debugging](ruby/readings/debugger.md")
