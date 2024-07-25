@@ -2,15 +2,15 @@
 
 ## Topics Covered
 
-- Enumerables and Debugging
-- References
-- Recursion
-- Git
-- Data Structures
-- Object-Oriented Programming
-- RSpec and TDD
-- Big-O
-- LRU Cache
+- [Enumerables and Debugging](#enumerables-and-debugging)
+- [References](#reference)
+- [Recursion](#recursion)
+- [Git](#git)
+- [Data Structures](#data-structures)
+- [Object-Oriented Programming](#object-oriented-programming)
+- [RSpec and TDD](#rspec-and-tdd)
+- [Big-O](#big-o)
+- [LRU Cache](#lru-cache)
 
 ## Notes
 
