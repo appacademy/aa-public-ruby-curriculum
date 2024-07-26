@@ -4,7 +4,7 @@ The material in this repository is divided by topic.
 
 * [Ruby](ruby/Open_Ruby_Overview.md)
 * SQL
-* Rails
+* [Rails](rails/Open_Rails_Overview.md)
 * HTML/CSS
 * JavaScript
 * React
