@@ -200,7 +200,7 @@ with a specific icon in your task menu.
 - [ ] 15. [Chess Solutions Walkthroughe](https://player.vimeo.com/video/317152522)
 - [ ] 16. [RSpec Lecture - Part One](https://player.vimeo.com/video/317367140)
 - [ ] 17. [RSpec Lecture - Part Two](https://player.vimeo.com/video/317367563)
-- [ ] 18. [Hack Academy](html-css/micro-projects/css_intro/README.md)
+- [ ] 18. [Hack Academy](../html-css/micro-projects/css_intro/README.md)
   - [Solution](https://www.appacademy.io/)
 - [ ] 19. [First TDD Projects](projects/first_tdd/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/ruby/projects/first_tdd/solution.zip)
