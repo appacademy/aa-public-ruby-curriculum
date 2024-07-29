@@ -225,7 +225,7 @@ with a specific icon in your task menu.
   - [Solution](https://assets.aaonline.io/fullstack/rails/homeworks/polymorphism-concerns/solution.zip)
 - [ ] 9. [Decorators (Bonus)](readings/decorators.md)
 - [ ] 10. [Checkboxes and Id Setters Reference](readings/checkboxes.md)
-- [ ] 11. [RedditClone](reddit_on_rails/README.md)
+- [ ] 11. [RedditClone](projects/reddit_on_rails/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/rails/projects/reddit_on_rails/solution.zip)
 ### Rails Lite
 - [ ] 1. [Rails Lite Intro](https://player.vimeo.com/video/161381457)
