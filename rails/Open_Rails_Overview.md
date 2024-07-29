@@ -121,8 +121,8 @@ with a specific icon in your task menu.
 - [ ] 19. [Controllers and State](readings/controllers-and-state.md)
 - [ ] 20. [CSRF and Forms](readings/csrf.md)
 - [ ] 21. [Displaying validation errors; flash](readings/validation.md)
-- [ ] 22. [Auth I: Creating Users](readings/auth-part-i.md)
-- [ ] 23. [Auth II: Sessions](readings/auth-part-ii.md)
+- [ ] 22. [Auth I: Creating Users](demos/rails-auth/README.md)
+- [ ] 23. [Auth II: Sessions](demos/rails-auth/README-Part-II.md)
 - [ ] 24. [Common User Auth Questions](readings/rails_user_authentication/README.md)
 - [ ] 25. [99Cats pt. 1 Solution](https://player.vimeo.com/video/336446896)
 - [ ] 26. [User Password Functionality & User Signup](https://player.vimeo.com/video/336449760)
@@ -146,6 +146,8 @@ with a specific icon in your task menu.
 - [ ] 11. [Auth Review](https://player.vimeo.com/video/336455270)
 - [ ] 12. [Music App](projects/music_app/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/rails/projects/music_app/solution.zip)
+- [ ] 13. [Helpers Layouts Mailers](projects/helpers_layouts_mailers/README.md)
+
 ### Testing with Rails
 - [ ] 1. [Rails Testing: Intro](https://player.vimeo.com/video/292415799)
 - [ ] 2. [Rails Testing: Setup](https://player.vimeo.com/video/292423696)
@@ -227,6 +229,7 @@ with a specific icon in your task menu.
 - [ ] 10. [Checkboxes and Id Setters Reference](readings/checkboxes.md)
 - [ ] 11. [RedditClone](projects/reddit_on_rails/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/rails/projects/reddit_on_rails/solution.zip)
+- [ ] 12. [Goal App Refactor](projects/goal_app_refactor/README.md)
 ### Rails Lite
 - [ ] 1. [Rails Lite Intro](https://player.vimeo.com/video/161381457)
 - [ ] 2. [HTTP](https://player.vimeo.com/video/161381484)

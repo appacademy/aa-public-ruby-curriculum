@@ -1,0 +1,30 @@
+<h1 class='page-header'><%= @band.name %></h1>
+
+<h4 class='sub-header'>Albums</h4>
+
+<% if @band.albums.length > 0 %>
+  <ul class='main-list'>
+  <% @band.albums.each do |album| %>
+    <li><a href="<%= album_url(album) %>"><p><%= album.title %></p></a></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>This band has no albums... yet!</p>
+<% end %>
+
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <% if current_user.admin? %>
+    <li><a class='button' href="<%= new_band_album_url(@band) %>">New album</a></li>
+    <li><a class='button' href="<%= edit_band_url(@band) %>">Edit Band</a></li>
+    <li>
+      <form action="<%= band_url(@band) %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+        <input type="submit" value="Destroy Band">
+      </form>
+    </li>
+    <li><a class='button' href="<%= users_url %>">Users</a></li>
+  <% end %>
+  <li><a class='button' href="<%= bands_url %>">All bands</a></li>
+</ul>

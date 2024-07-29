@@ -1,0 +1,105 @@
+p, a, input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+p {
+  color: #fff;
+}
+
+a, input[type='submit'] {
+
+  &:hover {
+    transition: .5s;
+    color: white;
+  }
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: skyblue;
+  color: #000;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: dodgerblue;
+    cursor: pointer;
+  }
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: skyblue;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: white;
+    background-color: dodgerblue;
+    cursor: pointer;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bungee Inline', cursive;
+}
+
+body {
+  background-color: #111;
+}
+
+.main-content {
+  width: 800px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 30px;
+  border: solid grey;
+  border-width: 0 5px;
+  background-color: #343030;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-logo {
+    font-size: 75px;
+    margin-bottom: 30px;
+    color: #FDDB61;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .user-detail {
+      display: flex;
+
+      p {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+.page-header {
+  font-size: 40px;
+  color: #39BAAC;
+  margin-bottom: 30px;
+}
+
+.sub-header {
+  font-size: 25px;
+  color: coral;
+  margin: 20px 0;
+}
+
+.page-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

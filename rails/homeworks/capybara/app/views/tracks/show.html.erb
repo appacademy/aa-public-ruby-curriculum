@@ -1,0 +1,27 @@
+<h1 class='page-header'><%= @track.title %></h1>
+
+<%= ugly_lyrics(@track.lyrics) %>
+
+<%= render "note/form", track: @track %>
+
+<h4 class='sub-header'>Notes</h4>
+
+<% @track.notes.each do |note| %>
+  <%= render "note/note", note: note %>
+<% end %>
+
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <% if current_user.admin? %>
+    <li><a class='button' href="<%= edit_track_url(@track) %>">Edit Track</a></li>
+    <li>
+      <form action="<%= track_url(@track) %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+        <input type="submit" value="Destroy Track">
+      </form>
+    </li>
+    <li><a class='button' href="<%= users_url %>">Users</a></li>
+  <% end %>
+  <li><a class='button' href="<%= album_url(@track.album) %>"><%= @track.album.title %></a></li>
+</ul>
