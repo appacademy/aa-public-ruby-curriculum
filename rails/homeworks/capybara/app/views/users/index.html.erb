@@ -1,0 +1,22 @@
+<h1 class='page-header'>Users</h1>
+<% if current_user.admin? %>
+  <table class='user-index'>
+    <tr>
+      <th> Admin? </th>
+      <th> Email </th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <form action="<%= toggle_admin_user_url(user) %>" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+            <input type="submit" value="<%= user.admin? ? "✔" : " " %>">
+          </form>
+        </td>
+        <td>
+          <a href="<%= user_url(user) %>"><p><%= user.email %></p></a>
+        </td>
+      </tr>
+    <% end %>
+  </ul>
+<% end %>

@@ -14,17 +14,19 @@ voter     |  GET     |   /voters/:id(.:format)     |    voters#show
           |  PUT     |   /voters/:id(.:format)     |    voters#update
 ```
 
-<quiz>
-  <question >
-  <p>Suppose you have a form at `/voters/:id/edit` for voters to update their information.  What are the correct `action` and `method` values for that form, respectively?</p>
-    <answer>`/voters/:id`, `post`</answer>
-    <answer>`/voters`, `post`</answer>
-    <answer correct>`/voters/:id`, `patch`</answer>
-    <answer>`/voters/:id/edit`, `patch`</answer>
-    <answer>`/voters`, `patch`</answer>
-    <explanation>The main clue here is that in order for your form to *update* information in the database, it needs to make a `patch` request. If you know the verb is `patch` then you can look in the table above to find the matching URL.</explanation>
-  </question>
-</quiz>
+Suppose you have a form at `/voters/:id/edit` for voters to update their information.  What are the correct `action` and `method` values for that form, respectively?
+- [ ] `/voters/:id`, `post`
+- [ ] `/voters`, `post`
+- [ ] `/voters/:id`, `patch`
+- [ ] `/voters/:id/edit`, `patch`
+- [ ] `/voters`, `patch`
+
+<details><summary>Answer:</summary>
+
+`/voters/:id`, `patch`</details>
+<details><summary>Explanation:</summary>
+
+The main clue here is that in order for your form to *update* information in the database, it needs to make a `patch` request. If you know the verb is `patch` then you can look in the table above to find the matching URL.</details>
 
 ```ruby
 # app/controllers/voters_controller.rb
@@ -47,29 +49,33 @@ end
 </ul>
 ```
 
-<quiz>
-  <question >
-  <p>What is wrong with the above code?</p>
-    <answer>A list item cannot have nested ERB code.</answer>
-    <answer>`VotersController#index` should redirect, not render.</answer>
-    <answer correct>`voters` will be undefined in the index view.</answer>
-    <answer>The index page should show information for only one voter.</answer>
-    <answer>Nothing is wrong.</answer>
-    <explanation>An HTML view can only access a controller's **instance variables**, not its local variables. Accordingly, for the code above to work, the `index` controller would need to store the `Voter`s in an instance variable--e.g., `@voters`--that the HTML view then accesses.</explanation>
-  </question>
-</quiz>
+What is wrong with the above code?
+- [ ] A list item cannot have nested ERB code.
+- [ ] `VotersController#index` should redirect, not render.
+- [ ] `voters` will be undefined in the index view.
+- [ ] The index page should show information for only one voter.
+- [ ] Nothing is wrong.
 
-<quiz>
-  <question >
-  <p>Which of the following is **NOT** a valid HTTP verb?</p>
-    <answer>`GET`</answer>
-    <answer>`PATCH`</answer>
-    <answer>`PUT`</answer>
-    <answer correct>`DESTROY`</answer>
-    <answer>`POST`</answer>
-    <explanation>This one is tricky! The HTTP verb is not destroy but `DELETE`.</explanation>
-  </question>
-</quiz>
+<details><summary>Answer:</summary>
+
+`voters` will be undefined in the index view.</details>
+<details><summary>Explanation:</summary>
+
+An HTML view can only access a controller's **instance variables**, not its local variables. Accordingly, for the code above to work, the `index` controller would need to store the `Voter`s in an instance variable--e.g., `@voters`--that the HTML view then accesses.</details>
+
+Which of the following is **NOT** a valid HTTP verb?
+- [ ] `GET`
+- [ ] `PATCH`
+- [ ] `PUT`
+- [ ] `DESTROY`
+- [ ] `POST`
+
+<details><summary>Answer:</summary>
+
+`DESTROY`</details>
+<details><summary>Explanation:</summary>
+
+This one is tricky! The HTTP verb is not destroy but `DELETE`.</details>
 
 ```ruby
 class VotersController < ApplicationController
@@ -95,26 +101,30 @@ class VotersController < ApplicationController
 end
 ```
 
-<quiz>
-  <question >
-  <p>What is wrong with the above code?</p>
-    <answer>The voter params are not properly filtered.</answer>
-    <answer>`update` will not persist to the database.</answer>
-    <answer correct>It may throw a double render error.</answer>
-    <answer>`update` should not render the `edit` template.</answer>
-    <explanation>A Rails controller cannot `render` twice. (`redirect_to` counts as a form of `render`.) In the code above, a successful `update` would cause the controller to attempt both to `redirect` and, because there is no `return` statement after the `redirect`, to `render`.</explanation>
-  </question>
-</quiz>
+What is wrong with the above code?
+- [ ] The voter params are not properly filtered.
+- [ ] `update` will not persist to the database.
+- [ ] It may throw a double render error.
+- [ ] `update` should not render the `edit` template.
 
-<quiz>
-  <question >
-  <p>In the Gemfile for a Rails project, in which block should the `binding_of_caller` and `better_errors` gems be nested?</p>
-    <answer correct>`group :development`</answer>
-    <answer>`group :production`</answer>
-    <answer>They should not be nested within any block</answer>
-    <explanation>Since `binding_of_caller` and `better_errors` create a security risk by exposing the inner workings of your code, you never want to include them in a `production` environment. They can also lead to false results in a `test` environment. Accordingly, you should nest them in the `development` group.</explanation>
-  </question>
-</quiz>
+ <details><summary>Answer:</summary>
+
+It may throw a double render error.</details>
+<details><summary>Explanation:</summary>
+
+A Rails controller cannot `render` twice. (`redirect_to` counts as a form of `render`.) In the code above, a successful `update` would cause the controller to attempt both to `redirect` and, because there is no `return` statement after the `redirect`, to `render`.</details>
+
+In the Gemfile for a Rails project, in which block should the `binding_of_caller` and `better_errors` gems be nested?
+- [ ] `group :development`
+- [ ] `group :production`
+- [ ] They should not be nested within any block
+
+<details><summary>Answer:</summary>
+
+`group :development`</details>
+<details><summary>Explanation:</summary>
+
+Since `binding_of_caller` and `better_errors` create a security risk by exposing the inner workings of your code, you never want to include them in a `production` environment. They can also lead to false results in a `test` environment. Accordingly, you should nest them in the `development` group.</details>
 
 ```html
 <!--  _form.html.erb -->
@@ -136,15 +146,17 @@ end
   <%= render 'form', voter: @voter %>
 ```
 
-<quiz>
-  <question >
-  <p>What is wrong with the above code snippet?</p>
-    <answer>The name of partial is wrong; it should be `_form`.</answer>
-    <answer>Forms cannot span two templates.</answer>
-    <answer>The params are incorrectly nested.</answer>
-    <answer>Form action must use a Rails url helper method.</answer>
-    <answer correct>`@voter.id` needs to be evaluated within printing ERB tags.</answer>
-    <answer>There is nothing wrong.</answer>
-    <explanation>ERB won't interpolate values unless they are within printing ERB tags!</explanation>
-  </question>
-</quiz>
+What is wrong with the above code snippet?
+- [ ] The name of partial is wrong; it should be `_form`.
+- [ ] Forms cannot span two templates.
+- [ ] The params are incorrectly nested.
+- [ ] Form action must use a Rails url helper method.
+- [ ] `@voter.id` needs to be evaluated within printing ERB tags.
+- [ ] There is nothing wrong.
+
+<details><summary>Answer:</summary>
+
+`@voter.id` needs to be evaluated within printing ERB tags.</details>
+<details><summary>Explanation:</summary>
+
+ERB won't interpolate values unless they are within printing ERB tags!</details>

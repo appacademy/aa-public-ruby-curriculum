@@ -1,0 +1,17 @@
+<% action = (type == :newuser) ? users_url : session_url %>
+<% button_text = (type == :newuser) ? "Sign Up" : "Log In" %>
+
+<form action="<%= action %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Username:
+    <input type="text" value="<%= @user.username %>" name="user[username]">
+  </label>
+  <br>
+
+  <label>Password:
+    <input type="password" value="<%= @user.password %>" name="user[password]">
+  </label>
+  <br>
+
+  <input type="submit" value="<%= button_text %>">
+</form>

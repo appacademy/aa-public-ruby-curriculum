@@ -1,0 +1,35 @@
+<% action = (action_type == :new) ? goals_url : goal_url(goal) %>
+<% button_text = (action_type == :new) ? "New Goal" : "Update Goal"%>
+
+<%= render 'shared/errors' %>
+
+<form action="<%= action %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <% if action_type == :edit %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
+  <label>Title:
+    <input type="text" value="<%= goal.title %>" name="goal[title]">
+  </label>
+  <br>
+
+  <label>Details:
+    <textarea name="goal[details]"><%= goal.details %></textarea>
+  </label>
+  <br>
+
+  <label>Private?
+    <input type="checkbox" name="goal[private]"
+      <%= 'checked="true"' if goal.private %>>
+  </label>
+  <br>
+
+  <label>Completed?
+    <input type="checkbox" name="goal[completed]"
+      <%= 'checked="true"' if goal.private %>>
+  </label>
+  <br>
+
+  <input type="submit" value="<%= button_text %>">
+</form>

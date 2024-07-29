@@ -1,0 +1,9 @@
+Welcome to my app <%= @user.email %>!
+===============================================
+
+You have successfully signed up to my app!
+Please activate your account by visiting this link:
+
+<%= activate_users_url(activation_token: @user.activation_token) %>
+
+Thanks for joining and have a great day!

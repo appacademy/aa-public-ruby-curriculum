@@ -1,0 +1,56 @@
+<div class="goal">
+
+  <h2>Goal:</h2>
+
+  <table>
+    <tr>
+      <th>Title:</th>
+      <td><%= @goal.title %></td>
+    </tr>
+    <tr>
+      <th>Details:</th>
+      <td><%= @goal.details %></td>
+    </tr>
+    <tr>
+      <th>Visibility:</th>
+      <td>
+        <% if @goal.private %>
+          Private
+        <% else %>
+          Public
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th>Finished?:</th>
+      <td>
+        <% if @goal.completed %>
+          Completed
+        <% else %>
+          Ongoing
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th>Cheers:</th>
+      <td><%= @goal.cheers.length %></td>
+    </tr>
+    <% if current_user && current_user.id == @goal.author_id %>
+      <tr>
+        <th>Completed?</th>
+        <td>
+          <%= render "shared/goal_complete_button", goal: @goal %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <div class="goal-comments">
+    <h4>Comments</h4>
+    <% @goal.comments.each do |comment| %>
+      <p><%= comment.body %></p>
+    <% end %>
+  </div>
+  <%= render "shared/comments_form", receiver_id: @goal.id, comment_type: "Goal" %>
+  <!-- add link to author's profile page later -->
+</div>

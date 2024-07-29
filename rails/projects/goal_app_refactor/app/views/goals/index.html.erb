@@ -1,0 +1,6 @@
+<h1>Your Goals</h1>
+<ul>
+  <% @goals.each do |goal| %>
+    <%= render "shared/show_goal_basics", goal: goal %>
+  <% end %>
+</ul>

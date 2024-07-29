@@ -1,0 +1,14 @@
+<div class='note-item'>
+  <p><%= note.content %></p>
+  <div class='note-item-info'>
+    <p>Authored by: <%= note.author.email %></p>
+
+    <% if note.author == current_user || current_user.admin? %>
+      <form action="<%= note_url(note) %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+        <input type="submit" value="Destroy Note">
+      </form>
+    <% end %>
+  </div>
+</div>
