@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Goal App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+  <body>
+    <header>
+      <h1>GOAL APP</h1>
+      <%= render "shared/errors" %>
+      <% if flash[:notices] %>
+        <div class="notices">
+          <% flash[:notices].each do |msg| %>
+            <p><b><%= msg %></b></p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <div class="pull-right">
+        <% if current_user %>
+          <p>Welcome <%= current_user_name %></p>
+          <form action="<%= session_url %>" method="post">
+            <input
+              type="hidden"
+              name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Log Out">
+          </form>
+
+          <p>Cheers Remaining:
+            <span id="cheer-limit"><%= current_user.cheer_count %></span>
+          </p>
+        <% else %>
+          <p><a href="<%= new_user_url %>">Sign Up</a></p>
+          <p>or</p>
+          <p><a href="<%= new_session_url %>">Log In</a></p>
+        <% end %>
+      </div>
+    </header>
+
+    <%= yield %>
+
+  </body>
+</html>
