@@ -73,7 +73,7 @@ with a specific icon in your task menu.
   - [Solution](https://assets.aaonline.io/fullstack/rails/projects/art_share_api/solution.zip)
 - [ ] 39. [CSS Friends Part 1](../html-css/micro-projects/css_friends_combined/css_friends_0/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/html-css/micro-projects/combined-css-friends/css-friends-pt1/solution.zip)
-- [ ] 40. [Art Share API (Part Two)](projects/art_share_api/part_two.md)
+- [ ] 40. [Art Share API (Part Two)](projects/art_share_api/README_part_two.md)
   - [Solution](https://assets.aaonline.io/fullstack/rails/projects/art_share_api/solution.zip)
 - [ ] 41. [Art Share API Solutions](https://player.vimeo.com/video/335906952)
 
