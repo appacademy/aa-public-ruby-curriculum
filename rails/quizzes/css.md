@@ -1,15 +1,17 @@
 # CSS
 
-<quiz>
-  <question>
-  <p>Which of the following does **NOT** belong in the HTML `head` section?</p>
-    <answer>`meta` tags</answer>
-    <answer>`script` tags</answer>
-    <answer correct>a `navbar`</answer>
-    <answer>`link` tags to load in CSS</answer>
-    <explanation>A `navbar` belongs within the `body` tag.</explanation>
-  </question>
-</quiz>
+Which of the following does **NOT** belong in the HTML `head` section?
+- [ ] `meta` tags
+- [ ] `script` tags
+- [ ] a `navbar`
+- [ ] `link` tags to load in CSS
+
+<details><summary>Answer:</summary>
+
+a `navbar`</details>
+<details><summary>Explanation:</summary>
+
+A `navbar` belongs within the `body` tag.</details>
 
 ```html
 <!-- Think back on the rules for selector precedence and consider the following: -->
@@ -33,16 +35,18 @@
 </p>
 ```
 
-<quiz>
-  <question>
-  <p>What will be the `font-size` and `color` of the text?</p>
-    <answer correct>`color: yellow`, `font-size: 80px`</answer>
-    <answer>`color: red`, `font-size: 80px`</answer>
-    <answer>`color: yellow`, `font-size: 12px`</answer>
-    <answer>`color: red`, `font-size: 12px`</answer>
-    <explanation>The `id` attribute takes precedence over the other attributes, so the `#big` CSS rule would ensure the `font-size: 80px`. Then the specificity of the `span` tag inheriting from the `p` tag would ensure the `color` would be `yellow`.</explanation>
-  </question>
-</quiz>
+What will be the `font-size` and `color` of the text?
+- [ ] `color: yellow`, `font-size: 80px`
+- [ ] `color: red`, `font-size: 80px`
+- [ ] `color: yellow`, `font-size: 12px`
+- [ ] `color: red`, `font-size: 12px`
+
+<details><summary>Answer:</summary>
+
+`color: yellow`, `font-size: 80px`</details>
+<details><summary>Explanation:</summary>
+
+The `id` attribute takes precedence over the other attributes, so the `#big` CSS rule would ensure the `font-size: 80px`. Then the specificity of the `span` tag inheriting from the `p` tag would ensure the `color` would be `yellow`.</details>
 
 ```html
 <!-- Think back on the rules for selector precedence and consider the following: -->
@@ -67,15 +71,17 @@
 </article>
 ```
 
-<quiz>
-  <question>
-  <p>What will be the `color` of the text?</p>
-    <answer>red</answer>
-    <answer correct>yellow</answer>
-    <answer>blue</answer>
-    <explanation>Precedence wins again! Since both the `section` and the `p` tag inherit from the `article` tag then the color of the text will be `yellow`. </explanation>
-  </question>
-</quiz>
+What will be the `color` of the text?
+- [ ] red
+- [ ] yellow
+- [ ] blue
+
+<details><summary>Answer:</summary>
+
+yellow</details>
+<details><summary>Explanation:</summary>
+
+Precedence wins again! Since both the `section` and the `p` tag inherit from the `article` tag then the color of the text will be `yellow`. </details>
 
 ```html
 <!-- Consider the following: -->
@@ -96,17 +102,19 @@
 <p>Third Paragraph</p>
 ```
 
-<quiz>
-  <question>
-  <p>Let's make the paragraphs display with 10 pixels of white space between them. What should the above `margin` and `padding` properties be set to?</p>
-    <answer>`margin: 5px`, `padding: 0`</answer>
-    <answer>`margin: 5px`, `padding: 5px`</answer>
-    <answer>`margin: 5px`, `padding: 10px`</answer>
-    <answer correct>`margin: 10px`, `padding: 0`</answer>
-    <answer>`margin: 0px`, `padding: 10px`</answer>
-    <explanation>For this problem you just need margin! Try experimenting with the different answers to see why.</explanation>
-  </question>
-</quiz>
+Let's make the paragraphs display with 10 pixels of white space between them. What should the above `margin` and `padding` properties be set to?
+- [ ] `margin: 5px`, `padding: 0`
+- [ ] `margin: 5px`, `padding: 5px`
+- [ ] `margin: 5px`, `padding: 10px`
+- [ ] `margin: 10px`, `padding: 0`
+- [ ] `margin: 0px`, `padding: 10px`
+
+<details><summary>Answer:</summary>
+
+`margin: 10px`, `padding: 0`</details>
+<details><summary>Explanation:</summary>
+
+For this problem you just need margin! Try experimenting with the different answers to see why.</details>
 
 ```html
 <!-- Consider the following: -->
@@ -122,16 +130,19 @@
 <section>I AM ALSO A SECTION</section>
 ```
 
-<quiz>
-  <question multiple>
-  <p>You want the `section`s to appear next to each other, and for each `section` to be `100px` tall and `100px` wide. Which of the following properties could you add to the `section` styling to achieve this? (Select all that apply.)</p>
-    <answer>`display: inline`</answer>
-    <answer correct>`display: inline-block`</answer>
-    <answer correct>`float: left`</answer>
-    <answer>None of these answers</answer>
-    <explanation>Both `display: inline-block` and `float: left` could achieve the look you are after!</explanation>
-  </question>
-</quiz>
+You want the `section`s to appear next to each other, and for each `section` to be `100px` tall and `100px` wide. Which of the following properties could you add to the `section` styling to achieve this? (Select all that apply.)
+- [ ] `display: inline`
+- [ ] `display: inline-block`
+- [ ] `float: left`
+- [ ] None of these answers
+
+<details><summary>Answer:</summary>
+
+- `display: inline-block`
+- `float: left`</details>
+<details><summary>Explanation:</summary>
+
+Both `display: inline-block` and `float: left` could achieve the look you are after!</details>
 
 ```html
 <!-- Consider the following: -->
@@ -147,13 +158,15 @@
 </p>
 ```
 
-<quiz>
-  <question>
-  <p>What will be the `p` tag's color and font size?</p>
-    <answer>`red`, `16px`</answer>
-    <answer>`red`, `12px`</answer>
-    <answer correct>`#FFFFFF`, `12px` </answer>
-    <answer>`#FFFFFF`, `16px`</answer>
-    <explanation>Inline styling will always be the most specific and will override any other CSS rule.</explanation>
-  </question>
-</quiz>
+What will be the `p` tag's color and font size?
+- [ ] `red`, `16px`
+- [ ] `red`, `12px`
+- [ ] `#FFFFFF`, `12px` 
+- [ ] `#FFFFFF`, `16px`
+
+<details><summary>Answer:</summary>
+
+`#FFFFFF`, `12px` </details>
+<details><summary>Explanation:</summary>
+
+Inline styling will always be the most specific and will override any other CSS rule.</details>

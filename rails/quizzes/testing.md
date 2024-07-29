@@ -1,15 +1,17 @@
 # Rails Testing
 
-<quiz>
-  <question>
-  <p>Which of the following should you not test when testing Rails models?</p>
-    <answer>Associations</answer>
-    <answer>Class methods</answer>
-    <answer correct>Private methods</answer>
-    <answer>Validations</answer>
-    <explanation>You should never need to test a `private` method directly. Instead, you would want to test the method that calls the `private` method.</explanation>
-  </question>
-</quiz>
+Which of the following should you not test when testing Rails models?
+- [ ] Associations
+- [ ] Class methods
+- [ ] Private methods
+- [ ] Validations
+
+<details><summary>Answer:</summary>
+
+Private methods</details>
+<details><summary>Explanation:</summary>
+
+You should never need to test a `private` method directly. Instead, you would want to test the method that calls the `private` method.</details>
 
 ```ruby
 # spec/factories/puppies.rb
@@ -21,17 +23,19 @@ FactoryBot.define do
 end
 ```
 
-<quiz>
-  <question>
-  <p>Say you use FactoryBot to build puppies. What, if anything, is wrong with the above puppy factory?</p>
-    <answer>You need to define your factory using the code `FactoryBot.build(:puppy, name: Faker::Name.name))`</answer>
-    <answer>You must say `factory Puppy` instead of `factory :puppy` in order for FactoryBot to know what sort of model you are trying to build.</answer>
-    <answer correct>You need to put `Faker::Name.name` inside a block so that it reads `name { Faker::Name.name }`.</answer>
-    <answer>You should generate a random name using `Faker.name` rather than `Faker::Name.name`.</answer>
-    <answer>Nothing--this factory will produce puppies with random names.</answer>
-    <explanation>FactoryBot will throw an error if you do not wrap `Faker::Name.name`--or any value you want to assign to an attribute--inside a block. (Passing a block enables the values to be generated dynamically.)</explanation>
-  </question>
-</quiz>
+Say you use FactoryBot to build puppies. What, if anything, is wrong with the above puppy factory?
+- [ ] You need to define your factory using the code `FactoryBot.build(:puppy, name: Faker::Name.name))`
+- [ ] You must say `factory Puppy` instead of `factory :puppy` in order for FactoryBot to know what sort of model you are trying to build.
+- [ ] You need to put `Faker::Name.name` inside a block so that it reads `name { Faker::Name.name }`.
+- [ ] You should generate a random name using `Faker.name` rather than `Faker::Name.name`.
+- [ ] Nothing--this factory will produce puppies with random names.
+
+<details><summary>Answer:</summary>
+
+You need to put `Faker::Name.name` inside a block so that it reads `name { Faker::Name.name }`.</details>
+<details><summary>Explanation:</summary>
+
+FactoryBot will throw an error if you do not wrap `Faker::Name.name`--or any value you want to assign to an attribute--inside a block. (Passing a block enables the values to be generated dynamically.)</details>
 
 ```ruby
   describe Puppy do
@@ -51,16 +55,18 @@ end
   end
 ```
 
-<quiz>
-  <question>
-  <p>Assuming that `Puppy::puppies_by_cuteness` is written correctly, why will the above spec fail?</p>
-    <answer correct>`FactoryBot.build` should be changed to `FactoryBot.create` since `Puppy::puppies_by_cuteness` queries the database. </answer>
-    <answer>You cannot use the same factory to build multiple objects.</answer>
-    <answer> You cannot use `FactoryBot` in model tests, only in integration tests.</answer>
-    <answer>The test should read `expect(puppies_by_cuteness).to be([10,9,8])` rather than `expect(puppies_by_cuteness).to eq([10,9,8])`.</answer>
-    <explanation>Calling `FactoryBot.build` is equivalent to calling `Model.new` which will not save to the testing database. If you are querying the database, you need to actually create these Puppies in your database by calling `FactoryBot.create`.</explanation>
-  </question>
-</quiz>
+Assuming that `Puppy::puppies_by_cuteness` is written correctly, why will the above spec fail?
+- [ ] `FactoryBot.build` should be changed to `FactoryBot.create` since `Puppy::puppies_by_cuteness` queries the database. 
+- [ ] You cannot use the same factory to build multiple objects.
+- [ ]  You cannot use `FactoryBot` in model tests, only in integration tests.
+- [ ] The test should read `expect(puppies_by_cuteness).to be([10,9,8])` rather than `expect(puppies_by_cuteness).to eq([10,9,8])`.
+
+<details><summary>Answer:</summary>
+
+`FactoryBot.build` should be changed to `FactoryBot.create` since `Puppy::puppies_by_cuteness` queries the database. </details>
+<details><summary>Explanation:</summary>
+
+Calling `FactoryBot.build` is equivalent to calling `Model.new` which will not save to the testing database. If you are querying the database, you need to actually create these Puppies in your database by calling `FactoryBot.create`.</details>
 
 Consider the following:
 
@@ -79,26 +85,31 @@ feature 'signing up a user' do
 end
 ```
 
-<quiz>
-  <question>
-  <p>The above code represents the syntax for a Capybara feature test. To transform it into typical syntax for a system test, what should you replace `feature`, `background`, and `scenario` with?</p>
-    <answer>`describe`, `before(:all)`, `it`</answer>
-    <answer correct>`describe`, `before`, `it`</answer>
-    <answer>`describe`, `given`, `context`</answer>
-    <answer>`context`, `given`, `describe`</answer>
-    <answer>`describe`, `context`, `it`</answer>
-    <explanation>When converting from Capybara feature DSL, `feature` becomes `describe`, `background` becomes `before`, `scenario` becomes `it`, and `given` becomes `let`.</explanation>
-  </question>
-</quiz>
+The above code represents the syntax for a Capybara feature test. To transform it into typical syntax for a system test, what should you replace `feature`, `background`, and `scenario` with?
+- [ ] `describe`, `before(:all)`, `it`
+- [ ] `describe`, `before`, `it`
+- [ ] `describe`, `given`, `context`
+- [ ] `context`, `given`, `describe`
+- [ ] `describe`, `context`, `it`
 
-<quiz>
-  <question multiple>
-  <p>Capybara helps with which of the following kinds of tests? (Select all that apply.) </p>
-    <answer correct>End-to-End tests</answer>
-    <answer correct>Integration tests</answer>
-    <answer>Unit tests</answer>
-    <answer>Manual tests</answer>
-    <answer> None of these answers</answer>
-    <explanation>You use Capybara only for end-to-end tests and integration tests. For unit tests, you can still use regular old `RSpec`.</explanation>
-  </question>
-</quiz>
+<details><summary>Answer:</summary>
+
+`describe`, `before`, `it`</details>
+<details><summary>Explanation:</summary>
+
+When converting from Capybara feature DSL, `feature` becomes `describe`, `background` becomes `before`, `scenario` becomes `it`, and `given` becomes `let`.</details>
+
+Capybara helps with which of the following kinds of tests? (Select all that apply.) 
+- [ ] End-to-End tests
+- [ ] Integration tests
+- [ ] Unit tests
+- [ ] Manual tests
+- [ ]  None of these answers
+
+<details><summary>Answer:</summary>
+
+- End-to-End tests
+- Integration tests</details>
+<details><summary>Explanation:</summary>
+
+You use Capybara only for end-to-end tests and integration tests. For unit tests, you can still use regular old `RSpec`.</details>
