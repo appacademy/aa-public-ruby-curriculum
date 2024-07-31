@@ -13,28 +13,32 @@
   10  end
 ```
 
-<quiz>
-  <question>
-  <p>When will the `witches` be fetched from the database?</p>
-    <answer>Line 1</answer>
-    <answer>Line 2</answer>
-    <answer>Line 4</answer>
-    <answer correct>Line 8</answer>
-    <answer>Line 9</answer>
-    <explanation>Active Record practices _lazy loading_, which means that it will not query the database until the records are needed. In the code above, the `witches` records are not needed until `witches.each` starts to iterate through `witches`, so that is when Active Record will actually fetch the information from the database.</explanation>
-  </question>
-</quiz>
+When will the `witches` be fetched from the database?
+- [ ] Line 1
+- [ ] Line 2
+- [ ] Line 4
+- [ ] Line 8
+- [ ] Line 9
 
-<quiz>
-  <question>
-  <p>What typically indicates an N+1 query?</p>
-    <answer>Fetching a `Relation` and one of its associations simultaneously</answer>
-    <answer correct>Fetching a `Relation`, followed by fetching an association on each item in the original `Relation`</answer>
-    <answer>Using `.joins`</answer>
-    <answer>Using `.includes?`</answer>
-    <explanation>An N+1 query occurs when you make a query (1) and then call an association on **each** of the N records fetched by that initial query (N).</explanation>
-  </question>
-</quiz>
+<details><summary>Answer:</summary>
+
+Line 8</details>
+<details><summary>Explanation:</summary>
+
+Active Record practices _lazy loading_, which means that it will not query the database until the records are needed. In the code above, the `witches` records are not needed until `witches.each` starts to iterate through `witches`, so that is when Active Record will actually fetch the information from the database.</details>
+
+What typically indicates an N+1 query?
+- [ ] Fetching a `Relation` and one of its associations simultaneously
+- [ ] Fetching a `Relation`, followed by fetching an association on each item in the original `Relation`
+- [ ] Using `.joins`
+- [ ] Using `.includes?`
+
+<details><summary>Answer:</summary>
+
+Fetching a `Relation`, followed by fetching an association on each item in the original `Relation`</details>
+<details><summary>Explanation:</summary>
+
+An N+1 query occurs when you make a query (1) and then call an association on **each** of the N records fetched by that initial query (N).</details>
 
 ```ruby
 
@@ -82,17 +86,19 @@ transfiguration = Subject.find_by(name: 'transfiguration')
 spells = transfiguration.books.includes(spells: [:inventor, :theory])
 ```
 
-<quiz>
-  <question>
-  <p>What would the above query fetch?</p>
-    <answer>All magical spells</answer>
-    <answer>A Beginner's Guide to Transfiguration by Emeric Switch</answer>
-    <answer>All transfiguration books, along with their authors</answer>
-    <answer>All magical books, along with their spells and the spells' inventors and theories</answer>
-    <answer correct>All transfiguration books, along with their spells and the spells' inventors and theories</answer>
-    <explanation>`Subject.find_by(name: 'transfiguration')` fetches the one `Subject` where the `name` is `transfiguration`. The resulting Active Record `Relation` is stored in the `transfiguration` variable. `transfiguration.books` then chains a `has_many` association that will grab all the `Book`s whose `subject_id` points to the transfiguration `Subject`. Finally, the chained `.includes(spells: [:inventor, :theory])` says that for each `Book` in `transfiguration.books`, grab its `spells` and each spell's `inventor` and `theory`.</explanation>
-  </question>
-</quiz>
+What would the above query fetch?
+- [ ] All magical spells
+- [ ] A Beginner's Guide to Transfiguration by Emeric Switch
+- [ ] All transfiguration books, along with their authors
+- [ ] All magical books, along with their spells and the spells' inventors and theories
+- [ ] All transfiguration books, along with their spells and the spells' inventors and theories
+
+<details><summary>Answer:</summary>
+
+All transfiguration books, along with their spells and the spells' inventors and theories</details>
+<details><summary>Explanation:</summary>
+
+`Subject.find_by(name: 'transfiguration')` fetches the one `Subject` where the `name` is `transfiguration`. The resulting Active Record `Relation` is stored in the `transfiguration` variable. `transfiguration.books` then chains a `has_many` association that will grab all the `Book`s whose `subject_id` points to the transfiguration `Subject`. Finally, the chained `.includes(spells: [:inventor, :theory])` says that for each `Book` in `transfiguration.books`, grab its `spells` and each spell's `inventor` and `theory`.</details>
 
 ```ruby
   class Character < ApplicationRecord
@@ -100,12 +106,16 @@ spells = transfiguration.books.includes(spells: [:inventor, :theory])
   end
 ```
 
-<quiz>
-  <question multiple>
-  <p>What do the above lines create? (Select all that apply.)</p>
-    <answer correct>A class method to select all muggles that can be called with `Character.muggles`</answer>
-    <answer correct>A succinct and clear name to use for this query</answer>
-    <answer correct>An easier way to call a commonly-used query</answer>
-    <explanation>All of the above!</explanation>
-  </question>
-</quiz>
+What do the above lines create? (Select all that apply.)
+- [ ] A class method to select all muggles that can be called with `Character.muggles`
+- [ ] A succinct and clear name to use for this query
+- [ ] An easier way to call a commonly-used query
+
+<details><summary>Answer:</summary>
+
+- A class method to select all muggles that can be called with `Character.muggles`
+- A succinct and clear name to use for this query
+- An easier way to call a commonly-used query</details>
+<details><summary>Explanation:</summary>
+
+All of the above!</details>

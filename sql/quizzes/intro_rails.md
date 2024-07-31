@@ -13,16 +13,18 @@ class CreateFriends < ActiveRecord::Migration[7.0]
 end
 ```
 
-<quiz>
-  <question>
-  <p>The above migration is:</p>
-    <answer>Creating a Friend model</answer>
-    <answer>Creating a model's validations</answer>
-    <answer correct>Creating a friends table</answer>
-    <answer>Creating a new Rails project</answer>
-    <explanation>The `create_table` block will create the specified `friends` table.</explanation>
-  </question>
-</quiz>
+The above migration is:</p>
+- [ ] Creating a Friend model
+- [ ] Creating a model's validations
+- [ ] Creating a friends table
+- [ ] Creating a new Rails project
+
+<details><summary>Answer:</summary>
+
+Creating a friends table</details>
+<details><summary>Explanation:</summary>
+
+The `create_table` block will create the specified `friends` table.</details>
 
 ```ruby
 class Dog < ApplicationRecord
@@ -33,27 +35,31 @@ class Dog < ApplicationRecord
 end
 ```
 
-<quiz>
-  <question>
-  <p>What class is the Dog class associated with?</p>
-    <answer correct>Person</answer>
-    <answer>`owner_id`</answer>
-    <answer>Owner</answer>
-    <answer>`.owner`</answer>
-    <explanation>The `class_name` will always point to the name of the model that will be returned by that association.</explanation>
-  </question>
-</quiz>
+What class is the Dog class associated with?</p>
+- [ ] Person
+- [ ] `owner_id`
+- [ ] Owner
+- [ ] `.owner`
 
-<quiz>
-  <question>
-  <p>What is the difference between `belongs_to` and `has_one`?</p>
-    <answer correct>The model that `belongs_to` the other model has a column holding the other model's `id`s</answer>
-    <answer>The model that `has_one` of the other model has a column holding the other model's `id`s</answer>
-    <answer>Both models in both relationships hold each other's `id`s</answer>
-    <answer>`belongs_to` implies ownership of; a Car `belongs_to` a Human and not the other way around</answer>
-    <explanation>The surefire way to know which model `belongs_to` another is if that model has a column holding the other model's `id`s. If a `Person` has a `cat_id` column then that Person model `belongs_to` a Cat model.</explanation>
-  </question>
-</quiz>
+<details><summary>Answer:</summary>
+
+Person</details>
+<details><summary>Explanation:</summary>
+
+The `class_name` will always point to the name of the model that will be returned by that association.</details>
+
+What is the difference between `belongs_to` and `has_one`?</p>
+- [ ] The model that `belongs_to` the other model has a column holding the other model's `id`s
+- [ ] The model that `has_one` of the other model has a column holding the other model's `id`s
+- [ ] Both models in both relationships hold each other's `id`s
+- [ ] `belongs_to` implies ownership of; a Car `belongs_to` a Human and not the other way around
+
+<details><summary>Answer:</summary>
+
+The model that `belongs_to` the other model has a column holding the other model's `id`s</details>
+<details><summary>Explanation:</summary>
+
+The surefire way to know which model `belongs_to` another is if that model has a column holding the other model's `id`s. If a `Person` has a `cat_id` column then that Person model `belongs_to` a Cat model.</details>
 
 ```ruby
 class Newspaper < ApplicationRecord
@@ -74,26 +80,32 @@ sf_chronicle = Newspaper.create(name: 'sf_chronicle')
 aaron_the_human = Human.create(name: 'aaron', newspaper: sf_chronicle)
 ```
 
-<quiz>
-  <question>
-  <p>Which of the following would return `aaron_the_human`?</p>
-    <answer>`Human.new(name: 'aaron')`</answer>
-    <answer>`Newspaper.subscribers`</answer>
-    <answer correct>`sf_chronicle.subscribers.find_by(name: 'aaron')`</answer>
-    <answer>`aaron_the_human.newspaper`</answer>
-    <explanation>You'd want to query the `subscribers` association on the `sf_chronicle` instance to find the particular `Human` you are seeking.</explanation>
-  </question>
-</quiz>
+Which of the following would return `aaron_the_human`?</p>
+- [ ] `Human.new(name: 'aaron')`
+- [ ] `Newspaper.subscribers`
+- [ ] `sf_chronicle.subscribers.find_by(name: 'aaron')`
+- [ ] `aaron_the_human.newspaper`
 
-<quiz>
-  <question multiple>
-  <p>What do ORMs allow you to do? Select all that apply.</p>
-    <answer correct>ORMs allow you to create instances of classes using information from a database</answer>
-    <answer correct>ORMs allow you to use OOP techniques to handle your information</answer>
-    <answer correct>ORMs allow you to persist state to a database</answer>
-    <explanation>ORMs are so helpful!</explanation>
-  </question>
-</quiz>
+<details><summary>Answer:</summary>
+
+`sf_chronicle.subscribers.find_by(name: 'aaron')`</details>
+<details><summary>Explanation:</summary>
+
+You'd want to query the `subscribers` association on the `sf_chronicle` instance to find the particular `Human` you are seeking.</details>
+
+What do ORMs allow you to do? Select all that apply.
+- [ ] ORMs allow you to create instances of classes using information from a database
+- [ ] ORMs allow you to use OOP techniques to handle your information
+- [ ] ORMs allow you to persist state to a database
+
+<details><summary>Answer:</summary>
+
+- ORMs allow you to create instances of classes using information from a database
+- RMs allow you to use OOP techniques to handle your information
+- ORMs allow you to persist state to a database</details>
+<details><summary>Explanation:</summary>
+
+ORMs are so helpful!</details>
 
 ``` ruby
 class LibraryMember < ApplicationRecord
@@ -127,13 +139,15 @@ class Book < ApplicationRecord
 end
 ```
 
-<quiz>
-  <question>
-  <p>What is wrong with the above code?</p>
-    <answer>Missing parentheses in the `has_many` associations</answer>
-    <answer>The associations should use `=>` instead of `:`</answer>
-    <answer correct>Missing commas in the `BookCheckout` associations</answer>
-    <answer>Book's `readers` association should be called `library_member`</answer>
-    <explanation>Those commas will get you! Always be watchful for syntax errors.</explanation>
-  </question>
-</quiz>
+What is wrong with the above code?</p>
+- [ ] Missing parentheses in the `has_many` associations
+- [ ] The associations should use `=>` instead of `:`
+- [ ] Missing commas in the `BookCheckout` associations
+- [ ] Book's `readers` association should be called `library_member`
+
+<details><summary>Answer:</summary>
+
+Missing commas in the `BookCheckout` associations</details>
+<details><summary>Explanation:</summary>
+
+Those commas will get you! Always be watchful for syntax errors.</details>
