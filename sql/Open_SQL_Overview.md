@@ -134,7 +134,7 @@ with a specific icon in your task menu.
 - [ ] 4. [Scopes](readings/scopes.md)
 - [ ] 5. [More on Querying](readings/querying-ii.md)
 - [ ] 6. [Active Record Quiz](quizzes/active_record.md)
-- [ ] 7. [Movie Buff in Training](homeworks/active_record_warmup/README.md)
+- [ ] 7. [Movie Buff in Training](homeworks/movie_buff/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/sql/homeworks/active_record_warmup/solution.zip)
 - [ ] 8. [N+1 Buster](homeworks/n_1_buster/README.md)
   - [Solution](https://assets.aaonline.io/fullstack/sql/homeworks/n_1_buster/solution.zip)
@@ -171,4 +171,3 @@ with a specific icon in your task menu.
   - [Solution](https://assets.aaonline.io/fullstack/sql/projects/active_record_lite/solution.zip)
 - [ ] 34. [Build Your Own ActiveRecord Part 2](projects/active_record_lite/instructions/active-record-lite-ii.md)
   - [Solution](https://assets.aaonline.io/fullstack/sql/projects/active_record_lite/solution.zip)
-
