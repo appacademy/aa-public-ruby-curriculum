@@ -3,7 +3,7 @@
 The material in this repository is divided by topic.  
 
 * Ruby
-* SQL
+* [SQL](sql/Open_SQL_Overview.md)
 * Rails
 * HTML/CSS
 * JavaScript
