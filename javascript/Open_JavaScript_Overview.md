@@ -140,11 +140,9 @@ with a specific icon in your task menu.
 - [ ] 16. [jQuery - Events](https://player.vimeo.com/video/337661180)
 - [ ] 17. [jQuery - Form Submission & DOM Insertion](https://player.vimeo.com/video/337660471)
 - [ ] 18. [jQuery.data Function](https://player.vimeo.com/video/337656355)
-- [ ] 19. [jQuery Tic Tac Toe](projects/ttt_jquery/README.md)
-- [Solution](https://assets.aaonline.io/fullstack/javascript/projects/ttt_jquery/solution.zip)
-- [ ] 20. [jQuery Towers of Hanoi](projects/hanoi_jquery/README.md)
+- [ ] 19. [jQuery Towers of Hanoi](projects/hanoi_jquery/README.md)
 - [Solution](https://assets.aaonline.io/fullstack/javascript/projects/hanoi_jquery/solution.zip)
-- [ ] 21. [jQuery Snake](projects/snake/README.md)
+- [ ] 20. [jQuery Snake](projects/snake/README.md)
 - [Solution](https://assets.aaonline.io/fullstack/javascript/projects/snake/solution.zip)
 ## AJAX
 - [ ] 1. [AJAX Video Lecture](https://player.vimeo.com/video/162860823)
