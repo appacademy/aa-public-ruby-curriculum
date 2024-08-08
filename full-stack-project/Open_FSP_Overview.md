@@ -76,6 +76,6 @@ Good Luck Programmers!
 - [ ] 23. [Sending Email with Sendgrid](resources/apis/sendgrid.md)
 - [ ] 24. [Task Automation: Delayed Job Gem](resources/gems/delayed-job.md)
 - [ ] 25. [Task Automation: Kaminari Gem](resources/gems/kaminari.md)
-- [ ] 26. [Heroku Task Scheduler](resources/helpful_tools/heroku-scheduler.md)
+- [ ] 26. [Heroku Task Scheduler](resources/deployment/heroku-scheduler.md)
 - [ ] 27. [Fixing Git Commit Authorship](../ruby/readings/git-fix-authorship.md)
 - [ ] 28. [Compiled List of Additional Resources](additional_resources.md)
