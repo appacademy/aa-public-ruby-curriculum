@@ -2,13 +2,13 @@
 
 ## Topics Covered
 
-- [React Fundamentals]()
-- [Redux Fundamentals]()
-- [Middleware and Thunks]()
-- [Redux and the Rails API]()
-- [Frontend Routing with React]()
-- [Frontend Auth]()
-- [Completing Bench BnB]()
+- [React Fundamentals](#react-fundamentals)
+- [Redux Fundamentals](#redux-fundamentals)
+- [Middleware and Thunks](#middleware-and-thunks)
+- [Redux and the Rails API](#redux-and-the-rails-api)
+- [Frontend Routing with React](#frontend-routing-with-react)
+- [Frontend Auth](#frontend-auth)
+- [Completing Bench BnB](#completing-bench-bnb)
 
 
 ## Notes
