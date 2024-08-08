@@ -7,5 +7,5 @@ The material in this repository is divided by topic.
 * Rails
 * HTML/CSS
 * JavaScript
-* React
+* [React](/react/Open_React_Overview.md)
 * Full-Stack Project

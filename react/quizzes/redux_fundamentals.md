@@ -1,14 +1,18 @@
 # Redux Fundamentals Quiz
 
-<quiz>
-  <question multiple>
-    <p>A React component's `#render` method will be invoked whenever:</p>
-    <answer correct>The component's state changes</answer>
-    <answer correct>The component's props change</answer>
-    <answer correct>The component's parent re-renders</answer>
-    <explanation>All three will trigger `render` for the component!</explanation>
-  </question>
-</quiz>
+A React component's `#render` method will be invoked whenever:
+- [ ] The component's state changes
+- [ ] The component's props change
+- [ ] The component's parent re-renders
+
+<details><summary>Answer:</summary>
+
+- The component's state changes
+- The component's props change
+- The component's parent re-renders</details>
+<details><summary>Explanation:</summary>
+
+All three will trigger `render` for the component!</details>
 
 ```js
 function UserReducer(oldState = {}, action) {
@@ -26,49 +30,57 @@ function UserReducer(oldState = {}, action) {
 }
 ```
 
-<quiz>
-  <question>
-    <p>What is wrong with the above reducer?</p>
-    <answer>It does not return the default state when invoked the first time.</answer>
-    <answer correct>It mutates the old state.</answer>
-    <answer>It does not return the oldState when passed irrelevant actions.</answer>
-    <answer>It does not `switch` on the correct property.</answer>
-    <explanation>Reducers should **never mutate** old state. If a slice of state in a reducer is going to be updated then that reducer should return an entirely new object.</explanation>
-  </question>
-</quiz>
+What is wrong with the above reducer?
+- [ ] It does not return the default state when invoked the first time.
+- [ ] It mutates the old state.
+- [ ] It does not return the oldState when passed irrelevant actions.
+- [ ] It does not `switch` on the correct property.
 
-<quiz>
-  <question>
-    <p>The `connect` function connects which two entities?</p>
-    <answer correct>React components and the store</answer>
-    <answer>React components and action-creators</answer>
-    <answer>The store and action-creators</answer>
-    <answer>The store and api endpoints</answer>
-    <answer>Api endpoints and action-creators</answer>
-    <explanation>`connect` connects the store to our React component!</explanation>
-  </question>
-</quiz>
+<details><summary>Answer:</summary>
 
-<quiz>
-  <question>
-    <p>The purpose of the provider is to:</p>
-    <answer>Provide customer support by calling a toll-free hotline</answer>
-    <answer>Provide action-creators to the store with</answer>
-    <answer correct>Provide the store to the component hierarchy</answer>
-    <answer>Provide api endpoints to the store</answer>
-    <explanation>`Provider` gives the component hirearchy access to the Redux store we create.</explanation>
-  </question>
-</quiz>
+It mutates the old state.</details>
+<details><summary>Explanation:</summary>
 
-<quiz>
-  <question>
-    <p>How does a React component gain access to the state?</p>
-    <answer correct>The container component connects the component to the store, passing select pieces of the state as props to the component </answer>
-    <answer>`connect` takes the store as an argument and curries it along to the component</answer>
-    <answer>The store must be explicitly passed down from parent component to child component until it reaches its destination, where it can be used</answer>
-    <explanation>We need to connect the React component to the store in the container for the component to have access to the state!</explanation>
-  </question>
-</quiz>
+Reducers should **never mutate** old state. If a slice of state in a reducer is going to be updated then that reducer should return an entirely new object.</details>
+
+The `connect` function connects which two entities?
+- [ ] React components and the store
+- [ ] React components and action-creators
+- [ ] The store and action-creators
+- [ ] The store and api endpoints
+- [ ] Api endpoints and action-creators
+
+<details><summary>Answer:</summary>
+
+React components and the store</details>
+<details><summary>Explanation:</summary>
+
+`connect` connects the store to our React component!</details>
+
+The purpose of the provider is to:
+- [ ] Provide customer support by calling a toll-free hotline
+- [ ] Provide action-creators to the store with
+- [ ] Provide the store to the component hierarchy
+- [ ] Provide api endpoints to the store
+
+<details><summary>Answer:</summary>
+
+Provide the store to the component hierarchy</details>
+<details><summary>Explanation:</summary>
+
+`Provider` gives the component hirearchy access to the Redux store we create.</details>
+
+How does a React component gain access to the state?
+- [ ] The container component connects the component to the store, passing select pieces of the state as props to the component 
+- [ ] `connect` takes the store as an argument and curries it along to the component
+- [ ] The store must be explicitly passed down from parent component to child component until it reaches its destination, where it can be used
+
+<details><summary>Answer:</summary>
+
+The container component connects the component to the store, passing select pieces of the state as props to the component </details>
+<details><summary>Explanation:</summary>
+
+We need to connect the React component to the store in the container for the component to have access to the state!</details>
 
 ```js
 // frontend/actions/cats_actions.js
@@ -78,17 +90,20 @@ export const REQUEST_CATS = "REQUEST_CATS";
 //...
 ```
 
-<quiz>
-  <question multiple>
-    <p>The file above exports multiple objects. How would you import `RECEIVE_CATS` and `REQUEST_CATS` in another file?</p>
-    <answer>```import RECEIVE_CATS from '../actions/cats_actions'; 
-                import REQUEST_CATS from '../actions/cats_actions';```</answer>
-    <answer correct>`import * as CatActions from '../actions/cats_actions';`</answer>
-    <answer correct>`import { RECEIVE_CATS, REQUEST_CATS } from '../actions/cats_actions';`</answer>
-    <answer>`import RECEIVE_CATS, REQUEST_CATS from '../actions/cats_actions';`</answer>
-    <explanation>Because `RECEIVE_CATS` AND `REQUEST_CATS` are exported individually from the `cat_actions.js`, we can either import all of the things exported from `cats_actions.js` (`import * as CatActions from '../actions/cats_actions';`) or we can destructure to explicity pull out the items we want to import by running (`import { RECEIVE_CATS, REQUEST_CATS } from '../actions/cats_actions';`)</explanation>
-  </question>
-</quiz>
+The file above exports multiple objects. How would you import `RECEIVE_CATS` and `REQUEST_CATS` in another file?
+- [ ] ```import RECEIVE_CATS from '../actions/cats_actions'; 
+                import REQUEST_CATS from '../actions/cats_actions';```
+- [ ] `import * as CatActions from '../actions/cats_actions';`
+- [ ] `import { RECEIVE_CATS, REQUEST_CATS } from '../actions/cats_actions';`
+- [ ] `import RECEIVE_CATS, REQUEST_CATS from '../actions/cats_actions';`
+
+<details><summary>Answer:</summary>
+
+- `import * as CatActions from '../actions/cats_actions';`
+- `import { RECEIVE_CATS, REQUEST_CATS } from '../actions/cats_actions';`</details>
+<details><summary>Explanation:</summary>
+
+Because `RECEIVE_CATS` AND `REQUEST_CATS` are exported individually from the `cat_actions.js`, we can either import all of the things exported from `cats_actions.js` (`import * as CatActions from '../actions/cats_actions';`) or we can destructure to explicity pull out the items we want to import by running (`import { RECEIVE_CATS, REQUEST_CATS } from '../actions/cats_actions';`)</details>
 
 ```js
 // frontend/reducers/cats_reducer.js
@@ -99,13 +114,15 @@ const cats = (state = {}, action) => {
 export default cats;
 ```
 
-<quiz>
-  <question multiple>
-    <p>Above is a file that exports one object. How could you import `cats` in another file?</p>
-    <answer>`import * as CatReducer from './cats';`</answer>
-    <answer correct>`import cats from './cats';`</answer>
-    <answer>`import { cats } from './cats';`</answer>
-    <answer>`import from './cats'`</answer>
-    <explanation>When we export a single object using `export default` we just need to name the object we are importing - no destruturing by running `import cats from './cats';`</explanation>
-  </question>
-</quiz>
+Above is a file that exports one object. How could you import `cats` in another file?
+- [ ] `import * as CatReducer from './cats';`
+- [ ] `import cats from './cats';`
+- [ ] `import { cats } from './cats';`
+- [ ] `import from './cats'`
+
+<details><summary>Answer:</summary>
+
+`import cats from './cats';`</details>
+<details><summary>Explanation:</summary>
+
+When we export a single object using `export default` we just need to name the object we are importing - no destruturing by running `import cats from './cats';`</details>

@@ -1,65 +1,53 @@
 # Last Quiz!!
 
-<quiz>
-  <question multiple>
-    <p>Which of the following are names of Ned's cats?</p>
-    <answer correct>Markov</answer>
-    <answer>Breakfast</answer>
-    <answer correct>Curie</answer>
-    <answer>Sennacy</answer>
-    <explanation>Markov and Curie!</explanation>
-  </question>
-</quiz>
+Which of the following are names of Ned's cats?</p>
+- [ ] Markov</answer>
+- [ ] Breakfast</answer>
+- [ ] Curie</answer>
+- [ ] Sennacy</answer>
+</details><details><summary>Explanation:</summary>
 
-<quiz>
-  <question>
-    <p>App Academy was founded in which year?</p>
-    <answer>1066</answer>
-    <answer>1492</answer>
-    <answer>1776</answer>
-    <answer>1906</answer>
-    <answer correct>2012</answer>
-    <explanation>21st century company!</explanation>
-  </question>
-</quiz>
+Markov and Curie!</details>
 
-<quiz>
-  <question>
-    <p>True or False?</p>
-    <answer correct>True</answer>
-    <answer>False</answer>
-    <answer>Neither</answer>
-    <answer>Both</answer>
-    <explanation>Truuu</explanation>
-  </question>
-</quiz>
+App Academy was founded in which year?</p>
+- [ ] 1066</answer>
+- [ ] 1492</answer>
+- [ ] 1776</answer>
+- [ ] 1906</answer>
+- [ ] 2012</answer>
+</details><details><summary>Explanation:</summary>
 
-<quiz>
-  <question>
-    <p>Evaluate the following: "This statement is false."</p>
-    <answer>True</answer>
-    <answer>False</answer>
-    <answer correct>???</answer>
-    <explanation>WAT</explanation>
-  </question>
-</quiz>
+21st century company!</details>
 
-<quiz>
-  <question>
-    <p>Burritos or tacos?</p>
-    <answer correct>Burritos</answer>
-    <answer>Tacos</answer>
-    <explanation>California burrito all the way.</explanation>
-  </question>
-</quiz>
+True or False?</p>
+- [ ] True</answer>
+- [ ] False</answer>
+- [ ] Neither</answer>
+- [ ] Both</answer>
+</details><details><summary>Explanation:</summary>
 
-<quiz>
-  <question>
-    <p>The `Macarena` was composed by whom?</p>
-    <answer>Jeff Fiddler</answer>
-    <answer>Prince</answer>
-    <answer>Queen</answer>
-    <answer correct>Los Del Rio</answer>
-    <explanation>The Fiddler sadly did not.</explanation>
-  </question>
-</quiz>
+Truuu</details>
+
+Evaluate the following: "This statement is false."</p>
+- [ ] True</answer>
+- [ ] False</answer>
+- [ ] ???</answer>
+</details><details><summary>Explanation:</summary>
+
+WAT</details>
+
+Burritos or tacos?</p>
+- [ ] Burritos</answer>
+- [ ] Tacos</answer>
+</details><details><summary>Explanation:</summary>
+
+California burrito all the way.</details>
+
+The `Macarena` was composed by whom?</p>
+- [ ] Jeff Fiddler</answer>
+- [ ] Prince</answer>
+- [ ] Queen</answer>
+- [ ] Los Del Rio</answer>
+</details><details><summary>Explanation:</summary>
+
+The Fiddler sadly did not.</details>
