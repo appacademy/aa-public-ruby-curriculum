@@ -45,7 +45,6 @@ Good Luck Programmers!
 ## Project
 - [ ] 1. [During the Project](project/during-the-project.md)
 - [ ] 2. [Production README](project/production-readme.md)
-- [ ] 3. [How to Turn in Your Project](project/turn_in_fullstack.md)
 ## Culure Curriculum II
 - [ ] 1. [Social Media: a tool for minorities, safe spaces and communities](http://www.lovefromberlin.net/social-media-a-tool-for-minorities-safe-spaces-and-communities/)
 - [ ] 2. [Technological Advancements To Improve Accessibility In Museums](http://amt-lab.org/blog/2016/4/accessibility-rebooted-technological-advancements-to-improve-accessibility-in-museums)
