@@ -2,8 +2,8 @@
 
 ## Topics Covered
 
-- [React Fundamentals](#react-fundamentals)
-- [Redux Fundamentals](#redux-fundamentals)
+- [React Fundamentals I](#react-fundamentals-I)
+- [Redux Fundamentals II](#redux-fundamentals-II)
 - [Middleware and Thunks](#middleware-and-thunks)
 - [Redux and the Rails API](#redux-and-the-rails-api)
 - [Frontend Routing with React](#frontend-routing-with-react)
@@ -25,7 +25,7 @@ Additional Resources are readings, videos, or articles that are not required,
 but will serve to deepen your understanding of a topic. They will be denoted
 with a specific icon in your task menu.
 
-## React Fundamentals
+## React Fundamentals I
 - [ ] 1. [NonTechnical Overview of React](readings/react_nontech.md)
 - [ ] 2. [NPM 1](readings/npm_configuration_1.md)
 - [ ] 3. [NPM 2](readings/npm_configuration_2.md)
@@ -67,7 +67,7 @@ with a specific icon in your task menu.
 - [Solution](https://assets.aaonline.io/fullstack/react/projects/react_minesweeper/solution.zip)
 - [ ] 35. [Redux Lite](projects/redux_lite/README.md)
 - [Solution](https://assets.aaonline.io/fullstack/react/projects/redux_lite/solution.zip)
-## Redux Fundamentals
+## Redux Fundamentals II
 - [ ] 1. [Nontechnical Overview of Redux](readings/redux_nontech.md)
 - [ ] 2. [Flux and Redux Intro](readings/flux_redux.md)
 - [ ] 3. [Store](readings/store.md)
