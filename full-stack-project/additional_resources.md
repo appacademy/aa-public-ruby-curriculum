@@ -12,8 +12,8 @@
   - [New Relic][new-relic] - performance monitoring
 
 [gon]: https://vimeo.com/168132088
-[omniauth]: omniauth
-[omniauth-and-facebook]: omniauth-and-facebook
+[omniauth]: /full-stack-project/resources/security/omniauth.md
+[omniauth-and-facebook]: /full-stack-project/resources/security/facebook-login.md
 [omniauth-demo]:
   https://assets.aaonline.io/fullstack/full-stack-project/additional_resources/OmniAuthDevise.zip
 [css-transitions]: https://vimeo.com/164928587
