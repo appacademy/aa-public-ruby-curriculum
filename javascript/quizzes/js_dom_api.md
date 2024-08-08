@@ -23,17 +23,19 @@
   </script>
 ```
 
-<quiz>
-  <question>
-    <p>When mousing over the `Leopold` `li` element, what are the `currentTarget` and `target`, respectively?</p>
-    <answer correct>`ul.joycean-corgis` and `<li>Leopold</li>`</answer>
-    <answer>`<li>Leopold</li>` and `ul.joycean-corgis`</answer>
-    <answer>`ul.joycean-corgis` and `ul.joycean-corgis`</answer>
-    <answer>`<li>Leopold</li>` and `<li>Leopold</li>`</answer>
-    <answer>There's only a `delegateTarget` and a `currentTarget`</answer>
-    <explanation>`target` will be the element that triggered the event - in this case, the `<li>` element that was moused over. `currentTarget` is the element that the event listener is assigned to, which is the `ul.joycean-corgis`</explanation>
-  </question>
-</quiz>
+When mousing over the `Leopold` `li` element, what are the `currentTarget` and `target`, respectively?
+- [ ] `ul.joycean-corgis` and `<li>Leopold</li>`
+- [ ] `<li>Leopold</li>` and `ul.joycean-corgis`
+- [ ] `ul.joycean-corgis` and `ul.joycean-corgis`
+- [ ] `<li>Leopold</li>` and `<li>Leopold</li>`
+- [ ] There's only a `delegateTarget` and a `currentTarget`
+
+<details><summary>Answer:</summary>
+
+`ul.joycean-corgis` and `<li>Leopold</li>`</details>
+<details><summary>Explanation:</summary>
+
+`target` will be the element that triggered the event - in this case, the `<li>` element that was moused over. `currentTarget` is the element that the event listener is assigned to, which is the `ul.joycean-corgis`</details>
 
 
 
@@ -59,17 +61,19 @@
   </script>
 ```
 
-<quiz>
-  <question>
-    <p>The code is the same as in question 1. When mousing over `Leopold` `li` element, what element(s) generate(s) the event?</p>
-    <answer>`ul.joycean-corgis` and `<li>Leopold</li>`</answer>
-    <answer correct>`<li>Leopold</li>`</answer>
-    <answer>`ul.joycean-corgis`</answer>
-    <answer>the `aside`</answer>
-    <answer>No element generates the event.</answer>
-    <explanation>The `<li>` is the element that was moused over and is therefore the element that generates the event.</explanation>
-  </question>
-</quiz>
+The code is the same as in question 1. When mousing over `Leopold` `li` element, what element(s) generate(s) the event?
+- [ ] `ul.joycean-corgis` and `<li>Leopold</li>`
+- [ ] `<li>Leopold</li>`
+- [ ] `ul.joycean-corgis`
+- [ ] the `aside`
+- [ ] No element generates the event.
+
+<details><summary>Answer:</summary>
+
+`<li>Leopold</li>`</details>
+<details><summary>Explanation:</summary>
+
+The `<li>` is the element that was moused over and is therefore the element that generates the event.</details>
 
 
 
@@ -92,17 +96,19 @@
   </script>
 ```
 
-<quiz>
-  <question>
-    <p>This code has a different `script`. What would be the `currentTarget`, `target`, and `delegateTarget`, respectively, when mousing over `Leopold` `li` element?</p>
-    <answer>`<li>Leopold</li>`, `<li>Leopold</li>`, `<li>Leopold</li>`</answer>
-    <answer>`ul.joycean-corgis`, `<li>Leopold</li>`, `ul.joycean-corgis`</answer>
-    <answer correct>`<li>Leopold</li>`, `<li>Leopold</li>`, `ul.joycean-corgis`</answer>
-    <answer>`ul.joycean-corgis`, NONE, `ul.joycean-corgis`</answer>
-    <answer>`ul.joycean-corgis`, `ul.joycean-corgis`, `ul.joycean-corgis`</answer>
-    <explanation>We are mousing over `<li>Leopold</li>` therefore that is the `target`.  The event listener is assigned to the `'li'` elements that are children to `ul.joycean-corgis`, therefor the `currentTarget` is the `'li'` that was moused over (`<li>Leopold</li>`).  The `delegateTarget` will be the element that the event listener was originally attached, `'ul.joycean-corgis'`.</explanation>
-  </question>
-</quiz>
+This code has a different `script`. What would be the `currentTarget`, `target`, and `delegateTarget`, respectively, when mousing over `Leopold` `li` element?
+- [ ] `<li>Leopold</li>`, `<li>Leopold</li>`, `<li>Leopold</li>`
+- [ ] `ul.joycean-corgis`, `<li>Leopold</li>`, `ul.joycean-corgis`
+- [ ] `<li>Leopold</li>`, `<li>Leopold</li>`, `ul.joycean-corgis`
+- [ ] `ul.joycean-corgis`, NONE, `ul.joycean-corgis`
+- [ ] `ul.joycean-corgis`, `ul.joycean-corgis`, `ul.joycean-corgis`
+
+<details><summary>Answer:</summary>
+
+`<li>Leopold</li>`, `<li>Leopold</li>`, `ul.joycean-corgis`</details>
+<details><summary>Explanation:</summary>
+
+We are mousing over `<li>Leopold</li>` therefore that is the `target`.  The event listener is assigned to the `'li'` elements that are children to `ul.joycean-corgis`, therefor the `currentTarget` is the `'li'` that was moused over (`<li>Leopold</li>`).  The `delegateTarget` will be the element that the event listener was originally attached, `'ul.joycean-corgis'`.</details>
 
 
 
@@ -137,28 +143,32 @@
 </script>
 ```
 
-<quiz>
-  <question>
-    <p>In what order would the alerts appear if you were to click on the text "Labyrinth"?</p>
-    <answer>'Nom Nom', 'Uh Oh', 'Escape!'</answer>
-    <answer>'Escape!', 'Uh Oh', 'Nom Nom'</answer>
-    <answer>'Escape!', 'Uh Oh'</answer>
-    <answer correct>'Uh Oh', 'Escape!'</answer>
-    <answer>No events are triggered</answer>
-    <explanation>The event will start at the element that we clicked on and then bubble up.</explanation>
-  </question>
-</quiz>
+In what order would the alerts appear if you were to click on the text "Labyrinth"?
+- [ ] 'Nom Nom', 'Uh Oh', 'Escape!'
+- [ ] 'Escape!', 'Uh Oh', 'Nom Nom'
+- [ ] 'Escape!', 'Uh Oh'
+- [ ] 'Uh Oh', 'Escape!'
+- [ ] No events are triggered
+
+<details><summary>Answer:</summary>
+
+'Uh Oh', 'Escape!'</details>
+<details><summary>Explanation:</summary>
+
+The event will start at the element that we clicked on and then bubble up.</details>
 
 
 
-<quiz>
-  <question>
-    <p>What's the data type of the return value of `window.history`?</p>
-    <answer>String</answer>
-    <answer>Array</answer>
-    <answer>Hash</answer>
-    <answer>NaN</answer>
-    <answer correct>Object</answer>
-    <explanation>Everything in JS is an object! `window.history` is an object with different properties like `length`.</explanation>
-  </question>
-</quiz>
+What's the data type of the return value of `window.history`?
+- [ ] String
+- [ ] Array
+- [ ] Hash
+- [ ] NaN
+- [ ] Object
+
+<details><summary>Answer:</summary>
+
+Object</details>
+<details><summary>Explanation:</summary>
+
+Everything in JS is an object! `window.history` is an object with different properties like `length`.</details>

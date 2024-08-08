@@ -6,6 +6,6 @@ The material in this repository is divided by topic.
 * SQL
 * Rails
 * HTML/CSS
-* JavaScript
+* [JavaScript](/javascript/Open_JavaScript_Overview.md)
 * React
 * Full-Stack Project
