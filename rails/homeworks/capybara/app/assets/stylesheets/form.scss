@@ -1,0 +1,25 @@
+.form {
+  width: 400px; 
+  display: flex;
+  flex-direction: column;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    label, input {
+      display: block;
+    }
+
+    label {
+      padding-right: 10px;
+      color: white;
+    }
+  }
+
+  input[type="submit"] {
+    align-self: flex-end;
+  }
+}
+

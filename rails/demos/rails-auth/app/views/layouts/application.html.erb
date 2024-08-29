@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auth Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+  
+    <% if !current_user.nil? %>
+      <ul>
+        <li>Logged in as: <%= current_user.username %></li>
+        <li>
+          <form action="<%= session_url %>" method="POST">
+            <input type="hidden"
+                  name="authenticity_token"
+                  value="<%= form_authenticity_token %>">
+            <input type="hidden" value="delete" name="_method" />
+            <input type="submit" value="Logout" />
+          </form>
+        </li>
+      </ul>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<% if current_user %>
+  <h3>New Comment</h3>
+
+  <%= render 'shared/errors' %>
+  <% receiver = comment_type == "User" ? :recipient_id : :goal_id %>
+  <% url =  comment_type == "User" ? user_comments_url : goal_comments_url %>
+
+  <form action="<%= url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name=<%= "comment[#{receiver}]" %> value="<%= receiver_id %>">
+    <label>Comment
+      <textarea name="comment[body]"></textarea>
+    </label>
+    <input type="submit" value="Save Comment">
+  </form>
+<% end %>

@@ -1,0 +1,28 @@
+<h1 class='page-header'><%= @album.title %></h1>
+
+<% if @album.tracks.length > 0 %>
+<ul class='main-list'>
+  <% @album.tracks.each do |track| %>
+    <li><a href="<%= track_url(track) %>"><p><%= track.title %></p></a></li>
+  <% end %>
+</ul>
+<% else %>
+  <p>This album has no tracks... yet!</p> 
+<% end %>
+
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <% if current_user.admin? %>
+    <li><a class='button' href="<%= new_album_track_url(@album) %>">New track</a></li>
+    <li><a class='button' href="<%= edit_album_url(@album) %>">Edit album</a></li>
+    <li>
+      <form action="<%= album_url(@album) %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+        <input type="submit" value="Destroy Album">
+      </form>
+    </li>
+    <li><a class='button' href="<%= users_url %>">Users</a></li>
+  <% end %>
+  <li><a class='button' href="<%= band_url(@album.band) %>">Back to <%= @album.band.name %></a></li>
+</ul>

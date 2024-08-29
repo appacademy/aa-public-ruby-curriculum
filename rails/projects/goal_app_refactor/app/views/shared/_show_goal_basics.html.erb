@@ -1,0 +1,24 @@
+<% privacy = (goal.private) ? "private" : "public" %>
+<% completedness = (goal.completed) ? "Complete" : "Ongoing"%>
+
+<li>
+  <a href="<%= goal_url(goal) %>"><%= goal.title %></a>
+  <p><i><%= privacy %></i></p>
+  <p><i><%= completedness %></i></p>
+  <br>
+
+  <% if current_user && current_user.id == goal.author_id %>
+    <%= render "shared/goal_complete_button", goal: goal %>
+    <br>
+    <form action="<%= goal_url(goal) %>" method="post">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="<%= "delete '#{goal.title}' goal" %>">
+      </form>
+  <% elsif current_user && !(goal.cheered_by?(current_user)) && current_user.cheer_count > 0 %>
+    <%= render "shared/cheer_button", goal: goal %>
+  <% end %>
+</li>

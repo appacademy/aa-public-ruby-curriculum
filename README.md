@@ -1,11 +1,11 @@
 # Welcome to App Academy!
 
-The material in this repository is divided by topic.  
+The material in this repository is divided by topic.
 
-* Ruby
-* [SQL](sql/Open_SQL_Overview.md)
-* Rails
-* HTML/CSS
-* JavaScript
-* React
-* Full-Stack Project
+- [Ruby](ruby/Open_Ruby_Overview.md)
+- [SQL](sql/Open_SQL_Overview.md)
+- [Rails](rails/Open_Rails_Overview.md)
+- HTML/CSS
+- JavaScript
+- React
+- Full-Stack Project

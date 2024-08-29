@@ -1,0 +1,19 @@
+<h1>My Cheers</h1>
+
+<% @cheers.each do |cheer| %>
+  <table class="cheer">
+    <tr>
+      <th>Cheer given by:</th>
+    </tr>
+    <tr>
+      <td><%= cheer.giver.username %></td>
+    </tr>
+    <tr>
+      <th>For goal of:</th>
+    </tr>
+    <tr>
+      <td><%= cheer.goal.title %></td>
+    </tr>
+  </table>
+  <br />
+<% end %>
